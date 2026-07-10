@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+// placeholder色
+$placeholderColor: #c3c3c3;
+
+// メディアクエリの基準幅
+$bp-sp: 640px;
+$bp-pc: 641px;
+
+// vwの基準となる幅 →320px=スマホ最小
+$vw_standard_width: 375;
+
+// transition
+$transition01: 0.3s ease-in-out;
+
+// color
+//$main_color01: #f7828f;
+$main_color_01: #2b2b2b;
+$main_color01: #2b2b2b;
+//$main_color02: #F8F5ED;
+$main_color02: #fffefa;
+//$main_color03: #e3ded2;
+$main_color03: #fffdf6;
+$deli:#6D7455;
+$deli-dark:#53573E;
+
+$feature-page-main: #c8a96e;
+
+$main_gold01: #e5ba05;
+$main_gold02: #f7e597;

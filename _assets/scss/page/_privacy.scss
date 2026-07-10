@@ -1,0 +1,91 @@
+/* -----------------------------------------------
+* privacy Module
+* privacyページ用
+-------------------------------------------------- */
+@use '../mixin/mixin' as *;
+@use '../setting/setting' as *;
+
+.p_privacy-body {
+  &__box {
+    margin-top: 56px;
+    @include sp(){
+      margin-top: 28px;
+    }
+  }
+  &__ttl {}
+  &__lead {
+    margin-top: 32px;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+    @include sp(){
+      margin-top: 16px;
+      font-size: 14px;
+    }
+  }
+  &__list {
+    margin-top: 24px;
+    @include sp(){
+      margin-top: 12px;
+    }
+  }
+  &__contact {
+    margin-top: 65px;
+    .co {
+      .bold {
+        font-weight: bold;
+      } 
+    }
+    .mail-link {
+      text-decoration: underline;
+    }
+  }
+  &__dec {
+    margin-top: 15px;
+  }
+  &__note {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+}
+
+.p_privacy-list {
+  counter-reset: num;
+  &__li + &__li {
+    margin-top: 24px;
+    @include sp(){
+      margin-top: 12px;
+    }
+  }
+  &__li {
+    position: relative;
+    padding-left: 24px;
+    &::before {
+      content: counter(num) ".";
+      counter-increment: num 1;
+      position: absolute;
+      top: 2.5%;
+      left: 0;
+      font-weight: bold;
+    }
+  }
+  &__ttl {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+    @include sp(){
+      font-size: 16px;
+    }
+  }
+  &__txt {
+    margin-top: 8px;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+    @include sp(){
+      margin-top: 4px;
+      font-size: 14px;
+    }
+  }
+}

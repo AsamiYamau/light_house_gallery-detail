@@ -1,0 +1,499 @@
+@use "../mixin/mixin" as *;
+@use "../setting/setting" as *;
+
+.p_menu-archive-mv {
+  position: relative;
+  &__txt {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 400px;
+    height: 140px;
+    @include sp() {
+      width: 250px;
+      height: 80px;
+    }
+  }
+  &__img {
+    img {
+      width: 100%;
+    }
+  }
+}
+.p_menu-archive {
+  background-color: $main_color02;
+  &.deli {
+    background-color: #DDE3D2;
+    //padding-bottom: 80px;
+  }
+  
+  &__cap {
+    padding: 80px 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.8;
+    position: relative;
+    .txt {
+      padding-bottom: 30px;
+    }
+    &.deli {
+      color: $deli-dark;
+    }
+    @include sp() {
+      padding: 20px;
+      font-size: 17px;
+    }
+  }
+  &__en {
+    font-size: 100px;
+    color: #fff;
+    display: block;
+    line-height: 1.2;
+    @include sp() {
+      font-size: 40px;
+    }
+  }
+  &__ja {
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    @include sp() {
+      font-size: 13px;
+    }
+  }
+  &__cont {
+    .txt-box {
+      text-align: center;
+    }
+    .kv {
+      @include sp() {
+        min-height: 200px;
+      }
+    }
+  }
+}
+.p_menu-archive-kv {
+  position: relative;
+  min-height: 320px;
+  &.small {
+    min-height: 200px;
+  }
+  &.block {
+    display: block;
+  }
+  &__ttl {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    @include sp() {
+      display: block;
+      width: 100%;
+      margin-top: -10px;
+    }
+    &.ptn02 {
+      @include pc(){
+        top: 58%;
+      }
+      @include sp(){
+        margin-top: 0;
+      }
+    }
+    &.ptn03 {
+      @include pc(){
+        top: 70%;
+      }
+      @include sp(){
+        margin-top: 0;
+      }
+    }
+    .en {
+      font-size: 100px;
+      color: #fff;
+      display: block;
+      line-height: 1.2;
+      @include sp() {
+        font-size: 40px;
+      }
+    }
+    .ja {
+      font-weight: bold;
+      color: #fff;
+      @include sp() {
+        font-size: 13px;
+      }
+    }
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @include sp() {
+      height: 35vw;
+      display: block;
+      
+    }
+
+  }
+}
+.p_menu-archive-cont {
+  // margin-top: -90px;
+  margin-top: 80px;
+  padding-bottom: 80px;
+  @include sp() {
+    // margin-top: -30px;
+    margin-top: 60px;
+  }
+  &.home {
+    margin-top: -90px;
+
+  }
+  &__btn {
+    width: 260px;
+    margin-left: auto;
+    &.mtm {
+      @include pc(){
+        margin-top: -20px;
+      }
+    }
+    &.mt02 {
+      margin-top: 7px;
+    }
+    &.small {
+      width: 150px;
+      .c-view-more {
+        font-size: 10px;
+        border-radius: 50px 0 0 0;
+        padding: 8px;
+      }
+    }
+  }
+  &__cont {
+    &:not(:first-child) {
+      margin-top: 60px;
+    }
+  }
+}
+.p_menu-archive-ankor {
+  
+  &__banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    @include sp() {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  }
+}
+.p_menu-archive-bottom {
+  @include pc() {
+    display: flex;
+    >li {
+      width: 50%;
+    }
+  }
+  &__item {
+    display: block;
+    position: relative;
+    &:hover {
+      @include pc() {
+        &::after {
+          opacity: 0;
+          
+        }
+      }
+    }
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: rgba(57, 45, 35, 0.8);
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: .3s;
+    }
+    &.deli {
+      &::after {
+        background-color: rgba(66, 70, 49, 0.8);
+      }
+    }
+  }
+  &__txt {
+    position: absolute;
+    z-index: 2;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  &__btn {
+    width: 260px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+
+  }
+  &__txt {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    .txt01 {
+      font-weight: bold;
+      color: rgba(255, 255, 255, 0.5);
+      display: block;
+      text-align: center;
+      @include sp() {
+        font-size: 14px;
+      }
+    }
+    .txt02 {
+      font-size: 36px;
+      color: #fff;
+      display: block;
+      text-align: center;
+      @include sp() {
+        font-size: 20px;
+      }
+    }
+    .txt03 {
+      font-size: 22px;
+      color: #fff;
+      display: block;
+      text-align: center;
+      @include sp() {
+        font-size: 16px;
+      }
+    }
+  }
+  &__img {
+    img {
+      width: 100%;
+    }
+  }
+}
+.p_deli__table {
+  padding-top: 80px;
+  background: $main_color02;
+  padding-bottom: 80px;
+}
+
+.p_menu-d {
+  background-color: $main_color02;
+  padding-bottom: 80px;
+  &.deli {
+    background-color: #DDE3D2;
+  }
+}
+.p_menu-d-top {
+  padding-top: 80px;
+  @include sp() {
+    padding-top: 50px;
+  }
+
+  &__cont {
+    margin-top: 40px;
+  }
+  &__wrap {
+    @include pc() {
+      display: flex;
+      >div {
+        width: 50%;
+      }
+    }
+  }
+  &__img-area {
+
+    @include pc() {
+      padding-right: 15px;
+    }
+  }
+  &__txt-area {
+    display: flex;
+    flex-direction: column;
+
+    @include pc() {
+      padding-left: 20px;
+    }
+    @include sp() {
+      margin-top: 26px;
+    }
+    .ttl {
+      font-weight: bold;
+      font-size: 20px;
+      &.deli {
+        color: $deli-dark;
+      }
+      @include sp() {
+        font-size: 18px;
+      }
+    }
+    .cap {
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: 10px;
+      line-height: 1.8;
+      color: #333;
+      @include sp() {
+        margin-top: 15px;
+      }
+    }
+  }
+  &__price {
+    border-top: 1px solid #CCCCCC;
+    margin-top: auto;
+    @include sp() {
+      margin-top: 50px;
+    }
+    
+  }
+  &__btn {
+    width: 340px;
+    margin: 0 auto;
+    margin-top: 20px;
+    transition: .3s;
+    &:hover {
+      @include pc() {
+        opacity: .8;
+      }
+    }
+    @include sp() {
+      width: 100%;
+    }
+  }
+  &__menu {
+    margin-top: 30px;
+  }
+  &__ico-info {
+    max-width: 400px !important;
+  }
+
+}
+.p_menu-d-cont {
+    margin-top: 100px;
+    @include sp() {
+      margin-top: 70px;
+    }
+  &__btn {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 55px;
+    transition: .3s;
+    &:hover {
+      @include pc() {
+        opacity: .8;
+      }
+    }
+    @include sp() {
+      width: 100%;
+    }
+  }
+  &__drink {
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 30px;
+    &.deli {
+      color: $deli-dark
+    }
+    @include sp() {
+      font-size: 20px;
+    }
+  }
+  &__list {
+    margin-top: 40px;
+    @include sp() {
+      margin-top: 25px;
+    }
+  }
+}
+.p_menu-deli-top {
+  padding-bottom: 100px;
+  @include min(1700) {
+    padding-bottom: 180px;
+  }
+  @include sp() {
+    padding-bottom: 150px;
+  }
+  &__txt-box {
+    @include min(1700) {
+      max-width: 500px !important;
+    }
+    @include pc() {
+      margin-left: auto;
+      max-width: 405px;
+    }
+    @include sp() {
+      margin-top: 40px;
+    }
+    .ttl {
+      font-weight: bold;
+      font-size: 28px;
+      color: $deli-dark;
+      @include sp() {
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+    .cap {
+      margin-top: 10px;
+      color: $deli-dark;
+      font-size: 18px;
+      @include sp() {
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+  }
+  &__img-box {
+    display: flex;
+    align-items: end;
+    @include pc() {
+      margin-top: -100px;
+    }
+    @include sp() {
+      margin-top: 20px;
+    }
+  }
+  &__img {
+    &:nth-child(1) {
+      width: 470px;
+      margin-right: 50px;
+      @include min(1700) {
+        width: 680px;
+      }
+      @include sp() {
+        width: 65%;
+        margin-right: 20px;
+      }
+    }
+    &:nth-child(2) {
+      width: 160px;
+      transform: translateY(50px);
+      @include min(1700) {
+        width: 250px;
+      }
+      @include sp() {
+        width: 35%;
+      }
+    }
+    .img {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
