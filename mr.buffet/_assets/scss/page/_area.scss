@@ -1,0 +1,32 @@
+/* -----------------------------------------------
+* area Module
+* areaページ用
+-------------------------------------------------- */
+@use '../mixin/mixin' as *;
+@use '../setting/setting' as *;
+
+
+.p_area-sec01{
+  padding: 80px 0 ;
+  background-color: rgba(248, 245, 237, 1);
+  @include sp{
+    padding: 40px 0;
+  }
+}
+
+.p_area-sec02{
+  padding: 120px 0 80px;
+  background-color: rgba(243, 240, 231, 1);
+  @include sp{
+    padding: 60px 0 40px;
+  }
+  &__btn{
+    margin-top: 80px;
+    @include pc{
+      padding: 0 220px;
+    }
+    @include sp{
+      margin-top: 40px;
+    }
+  }
+}

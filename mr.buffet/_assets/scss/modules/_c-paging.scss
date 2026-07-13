@@ -1,0 +1,95 @@
+@use '../mixin/mixin' as *;
+@use '../setting/setting' as *;
+
+.c-paging-area {
+  font-size: 0;
+  padding: 50px 0 0;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  @include sp(){
+    padding-top: 25px;
+  }
+}
+
+.c-paging-area > * {
+  border: 1px solid $main_color01;
+  border-radius: 50%;
+  min-width: 50px;
+  height: 100%;
+  aspect-ratio: 1/1;
+  line-height: 1;
+  color: $main_color01;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0 5px 5px;
+  padding: 0 4px;
+  position: relative;
+  text-align: center;
+  vertical-align: center;
+  @include pc(){
+    transition: 0.3s;
+    &:not(.dots):hover{
+      background: $main_color03;
+      color: $main_color01;
+    } 
+  }
+  @include sp(){
+    min-width: 35px;
+    font-size: 16px;
+  }
+}
+
+.c-paging-area .back {
+  padding: 0 32px;
+}
+
+.c-paging-area .page-numbers.current {
+  background: $main_color03;
+  color: $main_color01;
+}
+
+.c-paging-area .page-numbers.dots {
+  // min-width: 1px;
+  margin: 0;
+}
+
+.c-paging-area .next.page-numbers,
+.c-paging-area .prev.page-numbers{
+  position: relative;
+}
+
+.c-paging-area .next.page-numbers:before,
+.c-paging-area .prev.page-numbers:before{
+  content: '';
+  display: block;
+  width: 8px;
+  height: 15px;
+  background-image: url("../img/common/arrow_brown.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size:100% 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: 0.3s;
+}
+
+.c-paging-area .next.page-numbers:hover:before,
+.c-paging-area .prev.page-numbers:hover:before{
+  background-image: url("../img/common/arrow_brown.svg");
+}
+
+.c-paging-area .prev.page-numbers:before{
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}

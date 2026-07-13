@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <title>おといあわせ | こだわりビュッフェを、カジュアルに。</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" type="text/css" href="/css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <script
+      src="https://yubinbango.github.io/yubinbango/yubinbango.js"
+      charset="UTF-8"
+    ></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <!--#include virtual="/inc/header.html" -->
+
+      <div class="l-main">
+        <div class="l-main__side pc">
+          <!--#include virtual="/inc/sidebar.html" -->
+        </div>
+
+        <div class="l-main__main">
+          <main class="outer-block p_contact bg_img">
+            <section class="l-mv">
+              <div class="l-mv__img">
+                <img src="/img/contact/mv.jpg" alt="" />
+              </div>
+              <div class="l-mv__txt">
+                <div class="inner-block02">
+                  <h2 class="l-mv__txtbox anm-right">
+                    <p class="en">Contact</p>
+                    <p class="ja">お見積り・お問い合わせ</p>
+                  </h2>
+                </div>
+              </div>
+            </section>
+            <div class="c-bread">
+              <div class="inner-block">
+                <ul class="c-bread-list">
+                  <li class="c-bread-list__li">
+                    <a href="/" class="c-bread-list__item">トップページ</a>
+                  </li>
+                  <li class="c-bread-list__li">
+                    <sapn class="c-bread-list__txt"
+                      >お見積り・お問い合わせ</sapn
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="p_contact__wrap">
+              <div class="inner-block">
+                <div class="p_contact__ttl">
+                  まずは、お電話もしくは、メールでお気軽にお問い合わせください。
+                  <span class="p_contact__dec">
+                    <span class="c-mini-ribon deli"></span>
+                  </span>
+                </div>
+                <div class="p_contact__tel">
+                  <div class="p_contact__ttl02">お電話の場合はこちらから</div>
+                  <div class="p_contact__tel-box">
+                    <a href="tel:0120846413" class="p_contact-tel">
+                      <div class="p_contact-tel__tel">
+                        <div class="ico">
+                          <img src="/img/common/icon-tel-white.svg" alt="" />
+                        </div>
+                        <div class="num">0120-846-413</div>
+                      </div>
+                      <div class="p_contact-tel__txt">
+                        営業時間<br />
+                        10:00~21:00
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="p_contact__mail">
+                  <div class="p_contact__ttl02">メールの場合はこちらから</div>
+                </div>
+
+                <!-- tab切り替え・form -->
+                <div class="p_contact__form">
+                  <!-- tabボタン -->
+                  <div class="p_contact-tab">
+                    <div
+                      class="p_contact-tab__btn active bg_img js-tab-btn"
+                      data-tab="mitsumori"
+                    >
+                      お見積り
+                    </div>
+                    <div class="p_contact-tab__btn js-tab-btn" data-tab="cta">
+                      お問い合わせ・ご質問
+                    </div>
+                  </div>
+                  <!-- /tabボタン -->
+
+                  <!-- tab body -->
+                  <div class="p_contact-body js-tab-body" data-tab="mitsumori">
+                    お見積り
+
+                    <table class="c-form-table">
+                      <tbody class="h-adr">
+                        <tr>
+                          <th><span class="inner">企業名</span></th>
+                          <td class="validate-box">
+                            <input
+                              type="text"
+                              name="mitsumori-company"
+                              size="60"
+                              value=""
+                              class="c-input"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>
+                            <span class="inner">名前<span>必須</span></span>
+                          </th>
+                          <td class="validate-box">
+                            <input
+                              type="text"
+                              name="mitsumori-name"
+                              size="60"
+                              value=""
+                              class="c-input"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>
+                            <span class="inner">ふりがな<span>必須</span></span>
+                          </th>
+                          <td class="validate-box">
+                            <input
+                              type="text"
+                              name="mitsumori-kana"
+                              size="60"
+                              value=""
+                              class="c-input"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>
+                            <span class="inner">住所<span>必須</span></span>
+                          </th>
+                          <td class="validate-box">
+                            <div class="h-adr add-box">
+                              <span class="p-country-name" style="display: none"
+                                >Japan</span
+                              >
+                              <div class="yubin">
+                                <span class="yubin-ico">〒</span>
+                                <input
+                                  type="text"
+                                  class="p-postal-code c-input small"
+                                  size="8"
+                                  maxlength="8"
+                                  name="mitsumori-yubin"
+                                />
+                                <div
+                                  class="add-search-btn postal-search bg_img"
+                                >
+                                  住所検索
+                                </div>
+                              </div>
+
+                              <div class="add01 flex">
+                                <span class="form-txt">市区町村・番地</span>
+                                <input
+                                  type="text"
+                                  name="mitsumori-add01"
+                                  class="p-region p-locality p-street-address p-extended-address c-input"
+                                />
+                              </div>
+                              <div class="add02 flex">
+                                <span class="form-txt">建物名・部屋番号</span>
+                                <input type="text" name="mitsumori-add02" />
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>
+                            <span class="inner"
+                              >メールアドレス<span>必須</span></span
+                            >
+                          </th>
+                          <td class="validate-box notice">
+                            <input
+                              type="email"
+                              name="mitsumori-email"
+                              size="60"
+                              value=""
+                              data-conv-half-alphanumeric="true"
+                              class="c-input"
+                            />
+                            <input
+                              type="email"
+                              name="mitsumori-email2"
+                              size="60"
+                              value=""
+                              data-conv-half-alphanumeric="true"
+                              class="c-input"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>
+                            <span class="inner">電話番号<span>必須</span></span>
+                          </th>
+                          <td class="validate-box notice">
+                            <input
+                              type="text"
+                              name="mitsumori-tel"
+                              size="60"
+                              value=""
+                              class="c-input"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <th><span class="inner">実施日</span></th>
+                          <td class="validate-box notice flex">
+                            <div class="date-pick flex">
+                              <div class="ico">
+                                <img src="/img/contact/date.png" alt="" />
+                              </div>
+                              <input
+                                type="text"
+                                name="mitsumori-date"
+                                class="c-input mini"
+                              />
+                            </div>
+                            <div class="time flex">
+                              <div class="ico">
+                                <img src="/img/contact/time.png" alt="" />
+                              </div>
+                              <input
+                                type="text"
+                                name="mitsumori-time"
+                                class="c-input mini"
+                              />
+                              <span class="form-txt">時から開始予定</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th class="top">
+                            <span class="inner">予定人数</span>
+                          </th>
+                          <td class="validate-box notice flex">
+                            <input
+                              type="text"
+                              name="mitsumori-num"
+                              class="c-input small"
+                            />
+                            <span class="form-txt">人</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th class="top">
+                            <span class="inner"
+                              >ご希望のプラン<span>必須</span></span
+                            >
+                          </th>
+                          <td class="validate-box notice">
+                            <span class="mwform-radio-field horizontal-item">
+                              <label>
+                                <input
+                                  type="radio"
+                                  name="mitsumori-radio"
+                                  value="cateling"
+                                  class="check-btn js-radio"
+                                  checked
+                                  data-plan="cateling"
+                                />
+                                <span class="mwform-radio-field-text">
+                                  けーたりんぐ
+                                </span>
+                              </label>
+                            </span>
+                            <span class="mwform-radio-field horizontal-item">
+                              <label>
+                                <input
+                                  type="radio"
+                                  name="mitsumori-radio"
+                                  value="deli"
+                                  class="check-btn js-radio"
+                                  data-plan="deli"
+                                />
+                                <span class="mwform-radio-field-text">
+                                  おーどぶる
+                                </span>
+                              </label>
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <!-- cateling deliだしわけ -->
+                    <div class="p_contact-plan">
+                      <div class="p_contact-plan__ttl js-radio-change">
+                        ケータリングご利用メニュー
+                      </div>
+
+                      <!-- ケータリングフォーム -->
+                      <div
+                        class="p_contact-plan__cateling js-form"
+                        data-plan="cateling"
+                      >
+                        ケータリングフォーム
+                        <div class="c-form-plan-box">
+                          <div
+                            class="c-form-plan-box__ttl js-aco-btn"
+                            data-aco="cate_aco01"
+                          >
+                            <div class="ttl">プラン・ドリンクプラン</div>
+                          </div>
+                          <div
+                            class="c-form-plan-box__body js-aco-body"
+                            data-aco="cate_aco01"
+                            style="display: none"
+                          >
+                            <table class="c-form-table">
+                              <tr>
+                                <th>
+                                  <span class="inner"
+                                    >プラン<span>必須</span></span
+                                  >
+                                </th>
+                                <td>
+                                  <div class="c-select">
+                                    <select name="mitsumori-plan-plan" id="">
+                                      <option value="">aaaa</option>
+                                      <option value="">aaaa</option>
+                                    </select>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="inner">ドリンク</span></th>
+                                <td>
+                                  <div class="c-select">
+                                    <select name="mitsumori-plan-drink" id="">
+                                      <option value="">aaaa</option>
+                                      <option value="">aaaa</option>
+                                    </select>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="c-form-plan-box">
+                          <div
+                            class="c-form-plan-box__ttl js-aco-btn"
+                            data-aco="cate_aco02"
+                          >
+                            <div class="ttl">オプションプラン</div>
+                          </div>
+                          <div
+                            class="c-form-plan-box__body js-aco-body"
+                            data-aco="cate_aco02"
+                            style="display: none"
+                          >
+                            <table class="c-form-table plan">
+                              <tr>
+                                <th>
+                                  <span class="inner"
+                                    >肉の赤絨毯（レッドカーペット）　～ローストビーフ～</span
+                                  >
+                                </th>
+                                <td>
+                                  <span class="plan-price">3,300円</span>
+                                  <span class="form-txt">数量：</span>
+                                  <input
+                                    type="text"
+                                    name="mitsumori-plan-option01"
+                                  />
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>
+                                  <span class="inner"
+                                    >巻き寿司　マグロたたきのせ</span
+                                  >
+                                </th>
+                                <td>
+                                  <span class="plan-price">3,300円</span>
+                                  <span class="form-txt">数量：</span>
+                                  <input
+                                    type="text"
+                                    name="mitsumori-plan-option01"
+                                  />
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="c-form-plan-box">
+                          <div
+                            class="c-form-plan-box__ttl js-aco-btn"
+                            data-aco="cate_aco03"
+                          >
+                            <div class="ttl">単品ドリンク</div>
+                          </div>
+                          <div
+                            class="c-form-plan-box__body js-aco-body"
+                            data-aco="cate_aco03"
+                            style="display: none"
+                          >
+                            <table class="c-form-table plan">
+                              <tr>
+                                <th><span class="inner">ドリンク①</span></th>
+                                <td>
+                                  <span class="plan-price">3,300円</span>
+                                  <span class="form-txt">数量：</span>
+                                  <input
+                                    type="text"
+                                    name="mitsumori-plan-drink01"
+                                  />
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="inner">ドリンク②</span></th>
+                                <td>
+                                  <span class="plan-price">3,300円</span>
+                                  <span class="form-txt">数量：</span>
+                                  <input
+                                    type="text"
+                                    name="mitsumori-plan-drink02"
+                                  />
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="c-form-plan-box">
+                          <div
+                            class="c-form-plan-box__ttl js-aco-btn"
+                            data-aco="cate_aco04"
+                          >
+                            <div class="ttl">什器・備品</div>
+                          </div>
+                          <div
+                            class="c-form-plan-box__body js-aco-body"
+                            data-aco="cate_aco04"
+                            style="display: none"
+                          >
+                            <table class="c-form-table plan">
+                              <tr>
+                                <th><span class="inner">フォーク</span></th>
+                                <td>
+                                  <span class="plan-price">3,300円</span>
+                                  <span class="form-txt">数量：</span>
+                                  <input
+                                    type="text"
+                                    name="mitsumori-plan-other01"
+                                  />
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="inner">ナイフ</span></th>
+                                <td>
+                                  <span class="plan-price">3,300円</span>
+                                  <span class="form-txt">数量：</span>
+                                  <input
+                                    type="text"
+                                    name="mitsumori-plan-other02"
+                                  />
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="c-form-plan-box">
+                          <table class="c-form-table">
+                            <tr>
+                              <th>ご要望</th>
+                              <td>
+                                <textarea
+                                  name="mitsumori-plan-cont"
+                                  id=""
+                                  cols="30"
+                                  rows="10"
+                                ></textarea>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                      <!-- /ケータリングフォーム -->
+
+                      <!-- オードブルフォーム -->
+                      <div
+                        class="p_contact-plan__cateling js-form"
+                        data-plan="deli"
+                        style="display: none"
+                      >
+                        オードブルフォーム
+                        <div class="c-form-plan-box">
+                          <div
+                            class="c-form-plan-box__ttl js-aco-btn"
+                            data-aco="cate_aco01"
+                          >
+                            <div class="ttl">プラン・ドリンクプラン</div>
+                          </div>
+                          <div
+                            class="c-form-plan-box__body js-aco-body"
+                            data-aco="cate_aco01"
+                            style="display: none"
+                          >
+                            <table class="c-form-table">
+                              <tr>
+                                <th>
+                                  <span class="inner"
+                                    >プラン<span>必須</span></span
+                                  >
+                                </th>
+                                <td>
+                                  <div class="c-select">
+                                    <select name="mitsumori-plan-plan" id="">
+                                      <option value="">aaaa</option>
+                                      <option value="">aaaa</option>
+                                    </select>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="inner">ドリンク</span></th>
+                                <td>
+                                  <div class="c-select">
+                                    <select name="mitsumori-plan-drink" id="">
+                                      <option value="">aaaa</option>
+                                      <option value="">aaaa</option>
+                                    </select>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="c-form-plan-box">
+                          <div
+                            class="c-form-plan-box__ttl js-aco-btn"
+                            data-aco="cate_aco02"
+                          >
+                            <div class="ttl">オプションプラン</div>
+                          </div>
+                          <div
+                            class="c-form-plan-box__body js-aco-body"
+                            data-aco="cate_aco02"
+                            style="display: none"
+                          >
+                            <table class="c-form-table plan">
+                              <tr>
+                                <th>
+                                  <span class="inner"
+                                    >肉の赤絨毯（レッドカーペット）　～ローストビーフ～</span
+                                  >
+                                </th>
+                                <td>
+                                  <span class="plan-price">3,300円</span>
+                                  <span class="form-txt">数量：</span>
+                                  <input
+                                    type="text"
+                                    name="mitsumori-plan-option01"
+                                  />
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>
+                                  <span class="inner"
+                                    >巻き寿司　マグロたたきのせ</span
+                                  >
+                                </th>
+                                <td>
+                                  <span class="plan-price">3,300円</span>
+                                  <span class="form-txt">数量：</span>
+                                  <input
+                                    type="text"
+                                    name="mitsumori-plan-option01"
+                                  />
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="c-form-plan-box">
+                          <div
+                            class="c-form-plan-box__ttl js-aco-btn"
+                            data-aco="cate_aco03"
+                          >
+                            <div class="ttl">単品ドリンク</div>
+                          </div>
+                          <div
+                            class="c-form-plan-box__body js-aco-body"
+                            data-aco="cate_aco03"
+                            style="display: none"
+                          >
+                            <table class="c-form-table plan">
+                              <tr>
+                                <th><span class="inner">ドリンク①</span></th>
+                                <td>
+                                  <span class="plan-price">3,300円</span>
+                                  <span class="form-txt">数量：</span>
+                                  <input
+                                    type="text"
+                                    name="mitsumori-plan-drink01"
+                                  />
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="inner">ドリンク②</span></th>
+                                <td>
+                                  <span class="plan-price">3,300円</span>
+                                  <span class="form-txt">数量：</span>
+                                  <input
+                                    type="text"
+                                    name="mitsumori-plan-drink02"
+                                  />
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="c-form-plan-box">
+                          <div
+                            class="c-form-plan-box__ttl js-aco-btn"
+                            data-aco="cate_aco04"
+                          >
+                            <div class="ttl">什器・備品</div>
+                          </div>
+                          <div
+                            class="c-form-plan-box__body js-aco-body"
+                            data-aco="cate_aco04"
+                            style="display: none"
+                          >
+                            <table class="c-form-table plan">
+                              <tr>
+                                <th><span class="inner">フォーク</span></th>
+                                <td>
+                                  <span class="plan-price">3,300円</span>
+                                  <span class="form-txt">数量：</span>
+                                  <input
+                                    type="text"
+                                    name="mitsumori-plan-other01"
+                                  />
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="inner">ナイフ</span></th>
+                                <td>
+                                  <span class="plan-price">3,300円</span>
+                                  <span class="form-txt">数量：</span>
+                                  <input
+                                    type="text"
+                                    name="mitsumori-plan-other02"
+                                  />
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="c-form-plan-box">
+                          <table class="c-form-table">
+                            <tr>
+                              <th>ご要望</th>
+                              <td>
+                                <textarea
+                                  name="mitsumori-plan-cont"
+                                  id=""
+                                  cols="30"
+                                  rows="10"
+                                ></textarea>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                      <!-- /オードブルフォーム -->
+                    </div>
+                    <!-- /cateling deliだしわけ -->
+                    <!-- 同意・送信 -->
+                    <div class="p_contact-bottom">
+                      <div class="p_contact-bottom__txt">
+                        お客様にご入力いただいた個人情報は、弊社プライバシーポリシーに基づき厳重に管理します。下記の「個人情報の利用目的」をご一読いただき、了承の上、送信してください。
+                      </div>
+                      <div class="p_contact-bottom__policy">
+                        <div class="ttl">個人情報の利用目的</div>
+                        <ul class="p_contact-policy-list">
+                          <li class="p_contact-policy-list__item">
+                            ・お客様のご要望に合わせたサービスをご提供するための各種ご連絡
+                          </li>
+                          <li class="p_contact-policy-list__item">
+                            ・お問い合わせいただいたご質問への回答のご連絡。
+                          </li>
+                          <li class="p_contact-policy-list__item">
+                            ・取得した個人情報は、ご本人の同意なしに目的以外では利用しません。
+                          </li>
+                          <li class="p_contact-policy-list__item">
+                            ・情報が漏洩しないよう対策を講じ、スタッフを監督します。
+                          </li>
+                          <li class="p_contact-policy-list__item">
+                            ・ご本人の同意を得ずに第三者に情報を提供しません。
+                          </li>
+                          <li class="p_contact-policy-list__item">
+                            ・ご本人からの求めに応じ情報を開示します。
+                          </li>
+                          <li class="p_contact-policy-list__item">
+                            ・個人情報が事実と異なる場合、訂正や削除に応じます。
+                          </li>
+                          <li class="p_contact-policy-list__item">
+                            ・個人情報の取り扱いに関する苦情に対し、適切・迅速に対処します。
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="p_contact-privacy">
+                        <span class="mwform-checkbox-field horizontal-item">
+                          <label>
+                            <span class="inner"><span>必須</span></span>
+                            <input
+                              type="checkbox"
+                              name="privacy"
+                              value=""
+                              class="check-btn"
+                            />
+                            <span class="mwform-checkbox-field-text">
+                              「個人情報の利用目的」に同意します。
+                            </span>
+                          </label>
+                        </span>
+                      </div>
+                      <div class="p_contact-bottom__btn">
+                        <button class="c-btn03 back">戻る</button>
+                        <button class="c-btn03 confirm">内容を確認する</button>
+                        <button class="c-btn03 submit">送信する</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="p_contact-body js-tab-body"
+                    data-tab="cta"
+                    style="display: none"
+                  >
+                    お問い合わせ
+
+                    <table class="c-form-table">
+                      <tbody>
+                        <tr>
+                          <th><span class="inner">企業名</span></th>
+                          <td class="validate-box">
+                            <input
+                              type="text"
+                              name="cta-company"
+                              size="60"
+                              value=""
+                              class="c-input"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>
+                            <span class="inner">名前<span>必須</span></span>
+                          </th>
+                          <td class="validate-box">
+                            <input
+                              type="text"
+                              name="cta-name"
+                              size="60"
+                              value=""
+                              class="c-input"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>
+                            <span class="inner">ふりがな<span>必須</span></span>
+                          </th>
+                          <td class="validate-box">
+                            <input
+                              type="text"
+                              name="cta-kana"
+                              size="60"
+                              value=""
+                              class="c-input"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>
+                            <span class="inner">住所<span>必須</span></span>
+                          </th>
+                          <td class="validate-box">
+                            <div class="h-adr add-box">
+                              <span class="p-country-name" style="display: none"
+                                >Japan</span
+                              >
+                              <div class="yubin">
+                                <span class="yubin-ico">〒</span>
+                                <input
+                                  type="text"
+                                  class="p-postal-code c-input small"
+                                  size="8"
+                                  maxlength="8"
+                                  name="cta-yubin"
+                                />
+                                <div
+                                  class="add-search-btn postal-search bg_img"
+                                >
+                                  住所検索
+                                </div>
+                              </div>
+
+                              <div class="add01 flex">
+                                <span class="form-txt">市区町村・番地</span>
+                                <input
+                                  type="text"
+                                  name="cta-add01"
+                                  class="p-region p-locality p-street-address p-extended-address c-input"
+                                />
+                              </div>
+                              <div class="add02 flex">
+                                <span class="form-txt">建物名・部屋番号</span>
+                                <input type="text" name="cta-add02" />
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>
+                            <span class="inner"
+                              >メールアドレス<span>必須</span></span
+                            >
+                          </th>
+                          <td class="validate-box notice">
+                            <input
+                              type="email"
+                              name="cta-email"
+                              size="60"
+                              value=""
+                              data-conv-half-alphanumeric="true"
+                              class="c-input"
+                            />
+                            <input
+                              type="email"
+                              name="cta-email2"
+                              size="60"
+                              value=""
+                              data-conv-half-alphanumeric="true"
+                              class="c-input"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>
+                            <span class="inner"
+                              >電話番号<span class="any">任意</span></span
+                            >
+                          </th>
+                          <td class="validate-box notice">
+                            <input
+                              type="text"
+                              name="tel"
+                              size="60"
+                              value=""
+                              class="c-input"
+                            />
+                          </td>
+                        </tr>
+                        <tr>
+                          <th class="top">
+                            <span class="inner"
+                              >お問い合わせ・ご質問内容<span class="any"
+                                >任意</span
+                              ></span
+                            >
+                          </th>
+                          <td class="validate-box notice">
+                            <textarea
+                              name="cta-cont"
+                              cols="50"
+                              rows="5"
+                              class="c-textarea"
+                            ></textarea>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- 同意・送信 -->
+                    <div class="p_contact-bottom">
+                      <div class="p_contact-bottom__txt">
+                        お客様にご入力いただいた個人情報は、弊社プライバシーポリシーに基づき厳重に管理します。下記の「個人情報の利用目的」をご一読いただき、了承の上、送信してください。
+                      </div>
+                      <div class="p_contact-bottom__policy">
+                        <div class="ttl">個人情報の利用目的</div>
+                        <ul class="p_contact-policy-list">
+                          <li class="p_contact-policy-list__item">
+                            ・お客様のご要望に合わせたサービスをご提供するための各種ご連絡
+                          </li>
+                          <li class="p_contact-policy-list__item">
+                            ・お問い合わせいただいたご質問への回答のご連絡。
+                          </li>
+                          <li class="p_contact-policy-list__item">
+                            ・取得した個人情報は、ご本人の同意なしに目的以外では利用しません。
+                          </li>
+                          <li class="p_contact-policy-list__item">
+                            ・情報が漏洩しないよう対策を講じ、スタッフを監督します。
+                          </li>
+                          <li class="p_contact-policy-list__item">
+                            ・ご本人の同意を得ずに第三者に情報を提供しません。
+                          </li>
+                          <li class="p_contact-policy-list__item">
+                            ・ご本人からの求めに応じ情報を開示します。
+                          </li>
+                          <li class="p_contact-policy-list__item">
+                            ・個人情報が事実と異なる場合、訂正や削除に応じます。
+                          </li>
+                          <li class="p_contact-policy-list__item">
+                            ・個人情報の取り扱いに関する苦情に対し、適切・迅速に対処します。
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="p_contact-privacy">
+                        <span class="mwform-checkbox-field horizontal-item">
+                          <label>
+                            <span class="inner"><span>必須</span></span>
+                            <input
+                              type="checkbox"
+                              name="privacy"
+                              value=""
+                              class="check-btn"
+                            />
+                            <span class="mwform-checkbox-field-text">
+                              「個人情報の利用目的」に同意します。
+                            </span>
+                          </label>
+                        </span>
+                      </div>
+                      <div class="p_contact-bottom__btn">
+                        <button class="c-btn03 back">戻る</button>
+                        <button class="c-btn03 confirm">内容を確認する</button>
+                        <button class="c-btn03 submit">送信する</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /tab body -->
+                </div>
+                <!-- /tab切り替え・form -->
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+
+      <!--#include virtual="/inc/footer.html" -->
+    </div>
+    <!-- /wrapper -->
+
+    <script src="/js/lib/jquery-3.7.1.min.js"></script>
+    <script src="/js/lib/slick.min.js"></script>
+    <script src="/js/common.js"></script>
+  </body>
+</html>

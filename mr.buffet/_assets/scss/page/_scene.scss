@@ -1,0 +1,126 @@
+/* -----------------------------------------------
+* scene Module
+* sceneページ用
+-------------------------------------------------- */
+@use '../mixin/mixin' as *;
+@use '../setting/setting' as *;
+
+.p_scene{
+  
+}
+
+.p_scene-archive-kv{
+  
+  padding: 60px 110px 120px;
+  position: relative;
+  @include pc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @include sp{
+    padding: 30px 30px 60px 30px;
+  }
+  &__ttl{
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    padding-right: 20px;
+    position: relative;
+    z-index: 2;
+    @include pc{
+      width: calc(43%);
+    }
+    @include sp{
+      font-size: 23px;
+    }
+    .big {
+      font-size: 70px;
+      position: relative;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+      letter-spacing: 0.1em;
+      &::before {
+        content: "";
+        width: 100%;
+        height: 15px;
+        position: absolute;
+        left: 0;
+        bottom: 12px;
+        background: #c9c90e;
+        z-index: -1;
+      }
+      @include sp{
+        font-size: 50px;
+      }
+    }
+  }
+  &__cap{
+    color: #fff;
+    line-height: 1.8;
+
+    position: relative;
+    z-index: 2;
+    @include pc{
+      width: calc(100% - 43%);
+      padding-left: 40px;
+      border-left: 1px solid #fff;
+    }
+    @include sp{
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #fff;
+    }
+  }
+  &__bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    >img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &.budget {
+      &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0.6);
+      }
+    }
+  }
+}
+
+.p_scene-anker{
+  padding: 80px 0;
+  @include sp{
+    padding: 40px 0;
+  }
+}
+.p_scene-list{
+  
+  @include pc{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+ 
+  >li{
+    @include pc{
+      width: calc((100% - 32px) / 3);
+    }
+    @include sp{
+
+    }
+  }
+  >li+li{
+    @include sp{
+      margin-top: 10px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+/* -----------------------------------------------
+* faq Module
+* faqページ用
+-------------------------------------------------- */
+@use '../mixin/mixin' as *;
+@use '../setting/setting' as *;
+
+.p_faq-body {
+  padding: 80px 0 75px;
+  @include sp(){
+    padding: 40px 0 37px;
+  }
+  &__box {
+    &.top {
+      margin-top: 64px;
+      @include sp(){
+        margin-top: 55px;
+      }
+    }
+  }
+  &__cont {
+    margin-top: 32px;
+    @include sp(){
+      margin-top: 16px;
+    }
+  }
+}

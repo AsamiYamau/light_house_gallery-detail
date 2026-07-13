@@ -1,0 +1,27 @@
+/* -----------------------------------------------
+* company Module
+* companyページ用
+-------------------------------------------------- */
+@use '../mixin/mixin' as *;
+@use '../setting/setting' as *;
+
+.p_company{
+  overflow: hidden;
+  &__top {
+    padding-top: 1.9vw;
+    padding-bottom: 10vw;
+    @include sp(){
+      padding-bottom: 90px;
+    }
+  }
+}
+.p_company-cont {
+  @include pc(){
+    padding-top: 8.9vw;
+    padding-bottom: 18vw;
+  }
+  @include sp(){
+    padding-top: 45px;
+    padding-bottom: 80px;
+  }
+}

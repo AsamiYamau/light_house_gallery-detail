@@ -1,0 +1,68 @@
+/* -----------------------------------------------
+* guide Module
+* guideページ用
+-------------------------------------------------- */
+@use '../mixin/mixin' as *;
+@use '../setting/setting' as *;
+
+.p_guide{
+  overflow: hidden;
+  &__top {
+    padding-top: 7vw;
+    padding-bottom: 18vw;
+  @include sp() {
+    padding-top: 2rem;
+    padding-bottom: 10rem;
+  }
+  }
+}
+
+.p_guide-mv {
+  &__frame {}
+  &__cap {
+    text-align: center;
+    font-weight: 400;
+  }
+}
+
+.p_guide-bread {
+  &.guide {
+    padding-top: 16px;
+    @include sp(){
+      padding-top: 7px;
+    }
+  }
+}
+
+.p_guide-pay {
+  @include pc(){
+    padding-top: 2vw;
+    padding-bottom: 14.5vw;
+  }
+  @include sp(){
+    padding-top: 5px;
+    padding-bottom: 65px;
+  }
+}
+
+.p_guide-delivery {
+  @include pc(){
+    padding-top: 8.9vw;
+    padding-bottom: 18vw;
+  }
+  @include sp(){
+    padding-top: 30px;
+    padding-bottom: 80px;
+  }
+}
+
+.p_guide-cancel {
+  @include pc(){
+    padding-top: 9.7vw;
+    padding-bottom: 20.4vw;
+  }
+  @include sp(){
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+}

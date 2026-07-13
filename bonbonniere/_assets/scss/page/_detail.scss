@@ -1,0 +1,586 @@
+/* -----------------------------------------------
+* detail Module
+* detailページ用
+-------------------------------------------------- */
+@use "../mixin/mixin" as *;
+@use "../setting/setting" as *;
+
+.p_detail {
+}
+
+.p_detail-mv {
+  padding-top: 75px;
+  padding-bottom: 306px;
+  background: linear-gradient(
+    90deg,
+    #e1c4b6 0%,
+    #c7a592 40%,
+    #c29f8c 55%,
+    #b68e7c 75%,
+    #a27263 98%,
+    #a17061 100%
+  );
+
+  @include sp {
+    padding-top: 2rem;
+    padding-bottom: 10rem;
+  }
+
+  &__box01 {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+
+    @include sp {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+
+  &__left {
+    flex: 0 0 50vw;
+    width: 50vw;
+    margin-left: auto;
+    margin-left: calc(50% - 50vw);
+    position: relative;
+
+    img {
+      border-radius: 0 50px 50px 0;
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+
+      @include sp {
+        border-radius: 20px;
+      }
+    }
+
+    @include sp {
+      flex: 0 0 auto;
+      width: 100%;
+      margin-left: 0;
+    }
+
+    .mv-dec {
+      position: absolute;
+      top: -38px;
+      right: -34px;
+      width: 96px;
+    }
+  }
+
+  &__right {
+    width: 50%;
+
+    @include sp {
+      width: 100%;
+    }
+  }
+
+  &__txt01 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.2;
+    letter-spacing: 0.03em;
+    margin-top: 19px;
+
+    @include sp {
+      font-size: 1.6rem;
+      line-height: 1.6;
+    }
+
+    .small {
+      font-size: 4.2rem;
+    }
+  }
+
+  &__txt02 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.2;
+    letter-spacing: 0.03em;
+    margin-top: 25px;
+
+    @include sp {
+      margin-top: 1rem;
+      line-height: 2;
+    }
+  }
+
+  &__txt03 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 2.6;
+    letter-spacing: 0.03em;
+    color: $brown;
+    margin-top: 6px;
+    padding-left: 24px;
+    position: relative;
+
+    @include sp {
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      width: fit-content;
+      margin-inline: auto;
+      padding-left: 0;
+      text-align: left;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background: url(../img/common/tel-ico.svg) no-repeat center center;
+      background-size: contain;
+
+      @include sp {
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+        flex: 0 0 20px;
+      }
+    }
+  }
+
+  .c-btn01 {
+    @include sp {
+      width: fit-content;
+      display: block;
+      margin: 15px auto 0;
+    }
+  }
+}
+
+.p_detail-sec01 {
+  padding-top: 188px;
+  padding-bottom: 306px;
+  color: #fff;
+  position: relative;
+
+  @include sp {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  &__txtArea {
+  }
+
+  &__ttl {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.2;
+    letter-spacing: 0.03em;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -20%;
+      left: -4px;
+      width: 26px;
+      height: 13px;
+      background: url(../img/common/crown-dec_white.svg) no-repeat center center;
+      background-size: contain;
+    }
+
+    @include sp {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__txt {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.8;
+    letter-spacing: 0.03em;
+    margin-top: 2px;
+
+    @include sp {
+      font-size: 1.2rem;
+      line-height: 2;
+    }
+  }
+
+  &__list {
+    margin-top: 80px;
+    position: relative;
+
+    @include sp {
+      margin-top: 40px;
+    }
+  }
+
+  // 最後の下線用の左右ドット
+  &__list::before,
+  &__list::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #d3b6ae;
+    transform: translateY(50%);
+    z-index: 2;
+  }
+
+  &__list::before {
+    left: -20px;
+
+    @include sp {
+      left: -6px;
+    }
+  }
+
+  &__list::after {
+    right: -20px;
+
+    @include sp {
+      right: -6px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 41px 30px 31px;
+    border-top: 1px solid #d3b6ae;
+
+    &:last-child {
+      border-bottom: 1px solid #d3b6ae;
+    }
+
+    // 各liの上線用の左右ドット
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #d3b6ae;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+
+    &::before {
+      left: -20px;
+
+      @include sp {
+        left: -6px;
+      }
+    }
+
+    &::after {
+      right: -20px;
+
+      @include sp {
+        right: -6px;
+      }
+    }
+  }
+}
+
+.p_detail-sec02 {
+  padding-top: 115px;
+  padding-bottom: 306px;
+  color: $brown;
+  position: relative;
+
+  @include sp {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  &__txt {
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 2.2;
+    letter-spacing: 0.03em;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  &__txt02 {
+    font-size: 1.3rem;
+    font-weight: normal;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+    margin-top: 15px;
+
+    @include sp {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 15px;
+
+    @include sp {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid #604e4a;
+    color: #604e4a;
+    border-radius: 16px;
+    text-align: center;
+
+    @include sp {
+      padding: 10px;
+    }
+  }
+
+  &__ico {
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .ico01 {
+      width: 72px;
+      height: 72px;
+      @include sp() {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+
+    .ico02 {
+      width: 62px;
+      height: 62px;
+      @include sp() {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+
+    .ico03 {
+      width: 70px;
+      height: 70px;
+      @include sp() {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+
+    .ico04 {
+      width: 68px;
+      height: 68px;
+      @include sp() {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+  }
+
+  &__ttl {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    margin-top: 5px;
+
+    @include sp {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__custom-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-inline: 32px;
+    margin-top: 15px;
+
+    @include sp {
+      padding-inline: 20px;
+    }
+  }
+
+  &__custom-item {
+    width: fit-content;
+    word-break: keep-all;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+
+    @include sp {
+      font-size: 1.1rem;
+    }
+
+    &:not(:last-child)::after {
+      content: "/";
+      display: inline-block;
+    }
+  }
+
+  &__size-list {
+  }
+
+  &__size-item {
+    font-size: 1.3rem;
+    font-weight: normal;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+  }
+  &__size-price-list {
+    margin-top: 13px;
+  }
+  &__size-price-item {
+    font-size: 1.3rem;
+    font-weight: normal;
+
+    letter-spacing: 0.03em;
+  }
+  &__btnWrap {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    @include sp {
+      margin-top: 30px;
+    }
+  }
+}
+
+.p_detail-sec-option {
+  padding-top: 115px;
+  padding-bottom: 306px;
+  background: linear-gradient(
+    90deg,
+    #e1c4b6 0%,
+    #c7a592 40%,
+    #c29f8c 55%,
+    #b68e7c 75%,
+    #a27263 98%,
+    #a17061 100%
+  );
+  position: relative;
+
+  @include sp {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+
+    @include sp {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin-top: 40px;
+    }
+  }
+  &__item {
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid $brown;
+    border-radius: 16px;
+    min-height: 229px;
+
+    @include sp {
+      padding: 10px;
+    }
+  }
+  &__ttl {
+    font-size: 1.9rem;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    margin-top: 12px;
+    @include sp {
+      font-size: 1.6rem;
+    }
+  }
+  &__price {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.1em;
+    margin-top: 10px;
+    @include sp {
+      font-size: 1.2rem;
+    }
+    .price {
+      font-size: 2.2rem;
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: 0;
+      @include sp {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  &__txt01 {
+    font-size: 1.3rem;
+    letter-spacing: 0.03em;
+    margin-top: 6px;
+
+    .small {
+      font-size: 1rem;
+    }
+    @include sp() {
+      margin-top: 1.7rem;
+    }
+  }
+  .c-category-list02__item {
+    color: $brown;
+    border: 1px solid $brown;
+  }
+}
+
+.p_detail-sec03 {
+  padding-top: 115px;
+  padding-bottom: 306px;
+  color: #fff;
+  position: relative;
+
+  @include sp {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  &__txt01 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.2;
+    letter-spacing: 0.03em;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -20%;
+      left: -6px;
+      width: 26px;
+      height: 13px;
+      background: url(../img/common/crown-dec_brown.svg) no-repeat center center;
+      background-size: contain;
+    }
+  }
+}

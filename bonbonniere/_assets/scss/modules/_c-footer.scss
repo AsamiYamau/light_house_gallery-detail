@@ -1,0 +1,70 @@
+@use '../mixin/mixin' as *;
+@use '../setting/setting' as *;
+
+
+.footer {
+  background: url(../img/common/footer-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  @include pc(){
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
+  @include sp(){
+    padding-top: 2rem;
+    padding-bottom: 10rem;
+  }
+  &__wrap {
+    @include pc(){
+      display: flex;
+      justify-content: center;
+      gap: 152px;
+    }
+  }
+  &__logo {
+    @include pc(){
+      width: 230px;
+    }
+    @include sp(){
+      text-align: center;
+    }
+  }
+  &__box {
+    @include pc(){
+      width: 420px;
+    }
+  }
+
+  &__copy {
+    margin-top: 35px;
+    display: block;
+    text-align: center;
+  }
+}
+
+
+.footer-nav {
+  @include pc(){
+    display: flex;
+    gap: 70px;
+  }
+  &__item {  }
+  &__item + &__item {
+    @include sp(){
+      margin-top: 20px;
+    }
+  }
+
+  &__ttl {
+    color: #AB563E;
+  }
+  &__list {  }
+}
+.footer-nav02 {
+  &__li + &__li {
+    margin-top: 10px;
+  }
+  &__link {
+    color: #4F2C1C;
+  }
+}

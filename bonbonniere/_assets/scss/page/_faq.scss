@@ -1,0 +1,28 @@
+/* -----------------------------------------------
+* FAQ Module
+* FAQページ用
+-------------------------------------------------- */
+@use '../mixin/mixin' as *;
+@use '../setting/setting' as *;
+
+.p_faq {
+  &__anker {
+    position: relative;
+    z-index: 2;
+  } 
+}
+.p_faq-cont {
+  @include pc() {
+    padding-top: 8.9vw;
+    padding-bottom: 18vw;
+  }
+  @include sp() {
+    padding-top: 45px;
+    padding-bottom: 80px;
+  }
+}  
+
+.p_faq-sec {
+  position: relative;
+  z-index: 2;
+} 

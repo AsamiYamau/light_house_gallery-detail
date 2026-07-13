@@ -1,0 +1,68 @@
+/* -----------------------------------------------
+* column Module
+* columnページ用
+-------------------------------------------------- */
+@use "../mixin/mixin" as *;
+@use "../setting/setting" as *;
+
+.p_column-cont {
+  @include pc() {
+    padding-top: 15vw;
+    padding-bottom: 18vw;
+  }
+  @include sp() {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+  &__wrap {
+    @include pc() {
+      display: flex;
+      gap: 4rem;
+    }
+  }
+  &__main {
+    @include pc() {
+      width: 75%;
+    }
+  }
+  &__side {
+    @include pc() {
+      width: 25%;
+      position: sticky;
+      top: 0;
+      height: 100%;
+    }
+  }
+  &__cat-name {
+    margin-bottom: 4rem;
+  }
+}
+
+.p_column-side-list {
+  &__link {
+    padding: 8px 0;
+    padding-right: 15px;
+    display: block;
+    border-bottom: 1px dashed #a98778;
+    position: relative;
+    font-size: 1.4rem;
+    transition: $transition01;
+    &:hover {
+      @include pc() {
+        opacity: 0.7;
+      }
+    }
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      transform: translateY(-50%);
+      background: url(../img/common/arrow01.svg) no-repeat;
+      background-size: contain;
+      width: 10px;
+      height: 10px;
+    }
+  }
+}

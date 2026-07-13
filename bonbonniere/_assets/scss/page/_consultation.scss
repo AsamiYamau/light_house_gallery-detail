@@ -1,0 +1,560 @@
+/* -----------------------------------------------
+* consultation Module
+* フルオーダーご相談ページ用
+-------------------------------------------------- */
+@use "../mixin/mixin" as *;
+@use "../setting/setting" as *;
+
+.p_consultation {
+  overflow: hidden;
+  color: $brown;
+
+  .c-ttl02 {
+    .ja {
+      margin-top: 1.2rem;
+    }
+  }
+}
+
+.p_consultation-mv {
+  padding-top: 2.8rem;
+  text-align: center;
+
+  @include pc() {
+    padding-bottom: 3.4rem;
+  }
+
+  @include sp() {
+    padding-top: 2rem;
+    padding-bottom: 2.2rem;
+  }
+
+  &__lead {
+    margin-top: 3.4rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.2;
+    letter-spacing: 0.03em;
+
+    @include sp() {
+      margin-top: 2.2rem;
+      font-size: 1.3rem;
+      text-align: left;
+    }
+  }
+}
+
+.p_consultation-bread {
+  margin-bottom: 4.8rem;
+
+  @include sp() {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.p_consultation-content {
+  position: relative;
+  z-index: 3;
+  padding-bottom: 8.6rem;
+
+  @include sp() {
+    padding-bottom: 5rem;
+  }
+}
+
+.p_consultation-stepbar {
+  display: grid;
+  border-radius: 2px;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid $brown;
+  border-bottom: 1px solid $brown;
+
+  @include sp() {
+    margin: 0 0 4rem;
+    margin-right: 1rem;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.5rem;
+    padding: 1.5rem;
+    background: #dd8758;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1;
+
+    @include sp() {
+      min-height: 3rem;
+      font-size: 1.4rem;
+      padding: 0.8rem;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0.6rem;
+      right: -1.7rem;
+      z-index: 2;
+      width: 3.5rem;
+      height: 3.5rem;
+      background-color: #dd8758;
+      border-top: 1px solid $brown;
+      border-right: 1px solid $brown;
+      transform: rotate(45deg);
+
+      @include sp() {
+        top: .4rem;
+        right: -1rem;
+        width: 2.2rem;
+        height: 2.2rem;
+      }
+    }
+
+    &.is-active {
+      background: $brown;
+
+      &::after {
+        background-color: $brown;
+      }
+    }
+  }
+}
+
+.p_consultation-form {
+  margin-top: 7rem;
+
+  @include sp() {
+    margin-top: 0;
+    padding-bottom: 8rem;
+  }
+}
+
+.p_consultation-step {
+  position: relative;
+
+  & + & {
+    margin-top: 7.7rem;
+
+    @include sp() {
+      margin-top: 4rem;
+    }
+  }
+
+  &__num {
+    position: absolute;
+    top: -3.4rem;
+    left: 2.8rem;
+    z-index: 2;
+    color: $main_color01;
+    font-size: 3.6rem;
+    font-weight: 500;
+    line-height: 1;
+    text-shadow: 0 0 15px #fff;
+
+    @include sp() {
+      top: -2.2rem;
+      left: 1.4rem;
+      font-size: 2.4rem;
+    }
+
+    span {
+      font-size: 5.2rem;
+
+      @include sp() {
+        font-size: 3.4rem;
+      }
+    }
+  }
+
+  &__box {
+    padding: 5.8rem 10rem 6rem;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    background: rgba(#fff, 0.75);
+
+    @include sp() {
+      padding: 3.8rem 1.8rem 2.6rem;
+      border-radius: 12px;
+    }
+  }
+
+  &__head {
+    margin-bottom: 3.4rem;
+
+    @include sp() {
+      margin-bottom: 2.2rem;
+    }
+  }
+
+  &__ttl {
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+
+    @include sp() {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__txt {
+    margin-top: .8rem;
+    color: rgba($brown, 0.75);
+    font-size: 1.4rem;
+    line-height: 2.2;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+
+    @include sp() {
+      font-size: 1.2rem;
+      line-height: 1.9;
+    }
+  }
+}
+
+.p_consultation-card-list {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(5, 1fr);
+
+  @include sp() {
+    gap: 1.2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.p_consultation-shape-card {
+  cursor: pointer;
+  .normal,.active {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: $transition01;
+  }
+.normal {
+
+}
+.active {
+opacity: 0;
+}
+&.is-active {
+  .active {
+    opacity: 1;
+  }
+  .normal {
+    opacity: 0;
+  }
+}
+
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20.2rem;
+    padding: 3rem 1.2rem 2.5rem;
+    border: 1px solid $main_color01;
+    border-radius: 10px;
+    background: #fff;
+    color: $main_color01;
+    text-align: center;
+    transition: $transition01;
+    flex-direction: column;
+
+    @include sp() {
+      min-height: 16rem;
+      padding: 2.2rem 1rem 1.8rem;
+    }
+  }
+
+  &__ico {
+    position: relative;
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    margin-bottom: 1.8rem;
+
+    @include sp() {
+      width: 5.8rem;
+      height: 5.8rem;
+      margin-bottom: 1.4rem;
+    }
+  }
+
+  &__en {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: 0.03em;
+
+    @include sp() {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__ja {
+    margin-top: 0.4rem;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+
+    @include sp() {
+      font-size: 1.2rem;
+    }
+  }
+
+}
+
+.p_consultation-field {
+  .small-ttl {
+    margin-bottom: 1.4rem;
+  }
+  @include sp() {
+    padding-top: 1.8rem;
+  }
+
+  & + & {
+    margin-top: 4rem;
+
+    @include sp() {
+      margin-top: 2.4rem;
+    }
+  }
+
+  &__ttl {
+    padding-bottom: 1.2rem;
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid $brown;
+
+    @include sp() {
+      margin-bottom: 1.2rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__note {
+    margin: -0.8rem 0 1.8rem;
+    color: rgba($brown, 0.7);
+    font-size: 1.2rem !important;
+    line-height: 1.8;
+    font-weight: 400 !important;
+  }
+}
+
+.p_consultation-choice-list {
+  display: grid;
+  gap: 2rem 3rem;
+
+  @include sp() {
+    gap: 1rem;
+  }
+
+  &.is-size {
+    grid-template-columns: repeat(4, 1fr);
+
+    @include sp() {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &.is-half {
+    grid-template-columns: repeat(2, 1fr);
+
+    @include sp() {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &.is-third {
+    grid-template-columns: repeat(3, 1fr);
+
+    @include sp() {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &.is-budget {
+    grid-template-columns: repeat(5, 1fr);
+
+    @include sp() {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+.p_consultation-choice {
+  cursor: pointer;
+  position: relative;
+  input {
+    display: none;
+  }
+
+  &.radio-dot {
+    position: relative;
+    input {
+      display: none;
+    }
+  }
+  .radio-txt {
+    position: relative;
+    font-size: 1.7rem;
+    @include sp() {
+      font-size: 1.4rem;
+    }
+    &::before {
+      content: "";
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 50%;
+      background-color: #fff5e1;
+      position: absolute;
+      top: 50%;
+      left: -3rem;
+      transform: translateY(-50%);
+    }
+    &.choco {
+      &::before {
+        background-color: $brown;
+      }
+    }
+  }
+  .radio-txt02 {
+    font-size: 2.2rem;
+    flex-direction: row;
+        @include sp() {
+      font-size: 1.4rem;
+    }
+    .small {
+      font-size: 1.2rem;
+    }
+  }
+  .radio-txt03 {
+    font-size: 1.6rem;
+    flex-direction: row;
+        @include sp() {
+      font-size: 1.4rem;
+    }
+    .small {
+      font-size: 1.2rem;
+    }
+  }
+
+  > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 6rem;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid $main_color01;
+    border-radius: 6px;
+    background: #fff;
+    color: $main_color01;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: center;
+    transition: $transition01;
+    flex-direction: column;
+
+    @include sp() {
+      min-height: 5.2rem;
+      padding: 0.8rem;
+    }
+
+    strong {
+      display: block;
+      margin-bottom: 0.2rem;
+      font-size: 1.8rem;
+      font-weight: 500;
+
+      @include sp() {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+}
+
+.p_consultation-radio.is-active {
+  >span {
+    background: $main_color01;
+    color: #fff;
+  }
+}
+
+.p_consultation-upload-list {
+  display: grid;
+  gap: 2.4rem;
+  grid-template-columns: repeat(3, 1fr);
+  .c-contact__upload {
+    margin-top: 0;
+  }
+
+  @include sp() {
+    gap: 1.2rem;
+    grid-template-columns: 1fr;
+  }
+}
+
+.p_consultation-upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 18.2rem;
+  border: 1px solid $main_color01;
+  border-radius: 4px;
+  background: #fff;
+  color: $main_color01;
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.6;
+  text-align: center;
+  cursor: pointer;
+  transition: $transition01;
+  flex-direction: column;
+
+  @include sp() {
+    min-height: 12rem;
+  }
+
+  &:hover {
+    @include pc() {
+      background: rgba($main_color01, 0.08);
+    }
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__ico {
+    margin-bottom: 0.8rem;
+    font-size: 2.2rem;
+    line-height: 1;
+  }
+}
+
+.p_consultation-input-list {
+  display: grid;
+  gap: 2rem;
+}
+
+
+.p_consultation-submit {
+  margin-top: 4.4rem;
+  text-align: center;
+
+  @include sp() {
+    margin-top: 3rem;
+  }
+}

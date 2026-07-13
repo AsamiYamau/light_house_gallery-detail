@@ -1,0 +1,19 @@
+/* -----------------------------------------------
+* policy Module
+* policyページ用
+-------------------------------------------------- */
+@use "../mixin/mixin" as *;
+@use "../setting/setting" as *;
+
+.p_policy-cont {
+  @include pc() {
+    padding-top: 8.9vw;
+    padding-bottom: 18vw;
+  }
+  @include sp() {
+    padding-top: 45px;
+    padding-bottom: 80px;
+  }
+}
+
+

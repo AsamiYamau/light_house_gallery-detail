@@ -1,0 +1,378 @@
+@use "../mixin/mixin" as *;
+@use "../setting/setting" as *;
+
+@font-face {
+  src: url(../font/Abel-Regular.woff) format("woff");
+  font-family: "Abel";
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  src: url(../font/AkayaKanadaka-Regular.woff) format("woff");
+  font-family: "AkayaKanadaka";
+  font-weight: 400;
+  font-display: swap;
+}
+
+/*------------------------------------------------------------------------------
+  reset PC
+------------------------------------------------------------------------------*/
+
+
+html,
+input,
+textarea,
+select,
+button {
+  font-family:
+    "Noto Sans JP", "Zen Kaku Gothic New", "游ゴシック体", YuGothic,
+    "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.gothic {
+  font-family:
+    "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo,
+    sans-serif;
+}
+.en {
+  font-family: "Cormorant Garamond", serif;
+}
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+//.mincho{
+//  font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+//}
+
+html {
+  color: #4f2c1c;
+  background: #fff;
+  // font-size: 16px;
+  line-height: 1.6;
+  word-break: break-all;
+  letter-spacing: 0.05em;
+
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: 100%;
+
+  @include sp() {
+    font-size: min(vw(10), calc(600 / $vw_standard_width * 10px));
+  }
+
+  //【数値設定方法】vw(10,デザイン幅)
+  @include tab() {
+    font-size: vw(10, 1512);
+  }
+
+  // 【数値設定方法】min-width: デザイン幅　＋ 1px
+  @media screen and (min-width: 1513px) {
+    font-size: 10px;
+  }
+}
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  &.is-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  border: 0;
+  margin: 0;
+  vertical-align: top;
+  max-width: 100%;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+}
+
+input,
+select,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+@include placeholder(#ccc);
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: block;
+  @include sp() {
+    margin-top: 4rem;
+  }
+}
+
+.outer-block {
+  // min-width: 1240px;
+}
+
+.inner-block {
+  position: relative;
+  width: auto;
+  max-width: 1240px;
+  padding: 0 20px;
+  z-index: 2;
+  @include pc {
+    margin: 0 auto;
+  }
+}
+.inner-block02 {
+  position: relative;
+  width: auto;
+  max-width: 1020px;
+  padding: 0 20px;
+
+  @include min(1600) {
+    max-width: 1500px;
+  }
+  @include pc {
+    margin: 0 auto;
+  }
+}
+.inner-block03 {
+  position: relative;
+  width: auto;
+  max-width: 1240px;
+  padding: 0 20px;
+  @include min(1600) {
+    max-width: 1500px;
+  }
+  @include pc {
+    margin: 0 auto;
+  }
+}
+
+#wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+dl,
+dt,
+dd {
+  padding: 0;
+  margin: 0;
+}
+
+@include pc {
+  .sp {
+    display: none !important;
+  }
+
+  a[href^="tel:"] {
+    pointer-events: none;
+  }
+
+  a,
+  a::before,
+  a::after,
+  button {
+    //transition: $transition01;
+  }
+}
+
+//独自font-family読み込み
+
+@font-face {
+  src:
+    url(../font/NotoSansJP-Bold.woff2) format("woff2"),
+    url(../font/NotoSansJP-Bold.otf) format("opentype");
+  font-family: "Noto Sans JP";
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  src:
+    url(../font/NotoSansJP-Medium.woff2) format("woff2"),
+    url(../font/NotoSansJP-Medium.otf) format("opentype");
+  font-family: "Noto Sans JP";
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  src:
+    url(../font/NotoSansJP-Regular.woff2) format("woff2"),
+    url(../font/NotoSansJP-Regular.otf) format("opentype");
+  font-family: "Noto Sans JP";
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  src:
+    url(../font/CormorantGaramond-Bold.woff2) format("woff2"),
+    url(../font/CormorantGaramond-Bold.otf) format("opentype");
+  font-family: "Cormorant Garamond";
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  src:
+    url(../font/CormorantGaramond-Medium.woff2) format("woff2"),
+    url(../font/CormorantGaramond-Medium.otf) format("opentype");
+  font-family: "Cormorant Garamond";
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  src:
+    url(../font/CormorantGaramond-Regular.woff2) format("woff2"),
+    url(../font/CormorantGaramond-Regular.otf) format("opentype");
+  font-family: "Cormorant Garamond";
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  src:
+    url(../font/Poppins-Bold.woff2) format("woff2"),
+    url(../font/Poppins-Bold.otf) format("opentype");
+  font-family: "Poppins";
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  src:
+    url(../font/Poppins-Medium.woff2) format("woff2"),
+    url(../font/Poppins-Medium.otf) format("opentype");
+  font-family: "Poppins";
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  src:
+    url(../font/Poppins-Regular.woff2) format("woff2"),
+    url(../font/Poppins-Regular.otf) format("opentype");
+  font-family: "Poppins";
+  font-weight: 400;
+  font-display: swap;
+}
+
+//.serif {
+//  font-family: "Noto Serif JP", serif;
+//}
+
+//SVGスプライトリセットCSS
+.c-svg {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: top;
+}
+
+/*------------------------------------------------------------------------------
+  reset SP
+------------------------------------------------------------------------------*/
+@include sp {
+  body {
+    font-size: 14px;
+    position: relative;
+    -webkit-appearance: none;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .outer-block {
+    min-width: 320px;
+  }
+
+  .inner-block {
+    padding: 0 10px;
+    width: auto;
+  }
+  .inner-block02 {
+    padding: 0 10px;
+    width: auto;
+  }
+  .inner-block03 {
+    padding: 0 10px;
+    width: auto;
+  }
+
+  #wrapper {
+    min-width: 320px;
+    position: relative;
+    overflow: clip;
+  }
+
+  input[type="submit"] {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+
+  .pc {
+    display: none !important;
+  }
+}

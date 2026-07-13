@@ -1,0 +1,2532 @@
+@use "../mixin/mixin" as *;
+@use "../setting/setting" as *;
+
+//----------------------------------
+// タイトル
+//----------------------------------
+.c-ttl01 {
+  position: relative;
+  padding-left: 60px;
+
+  @include sp {
+    padding-left: 40px;
+  }
+
+  .en {
+    font-size: 5rem;
+    line-height: 1;
+    color: $main-color01;
+    @include sp() {
+      font-size: 3rem;
+    }
+  }
+
+  .ja {
+    margin-top: 6px;
+    font-size: 1.6rem;
+    line-height: 1;
+    @include sp() {
+      font-size: 1.4rem;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 36.92px;
+    height: 43.3px;
+    background: url("../img/common/kuma-dec01.svg") no-repeat center center;
+    background-size: contain;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    margin-bottom: 10px;
+
+    @include sp() {
+      width: 3rem;
+      height: 3.8rem;
+    }
+  }
+}
+
+.c-ttl02 {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+
+  .en {
+    font-size: 5.6rem;
+    font-weight: 500;
+    line-height: 1;
+
+    @include sp {
+      font-size: 3.2rem;
+    }
+  }
+
+  .ja {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1;
+
+    @include sp {
+      font-size: 1.6rem;
+    }
+  }
+
+  .dec {
+    display: inline-block;
+    width: 60.96px;
+    height: 64.49px;
+
+    @include sp {
+      width: 40px;
+      height: 42px;
+    }
+  }
+
+  &.ptn_orange {
+    .en {
+      color: #ab563e;
+    }
+  }
+  &.ptn_rightbrown {
+    .en {
+      color: #d3b6ae;
+    }
+  }
+}
+
+.c-ttl03 {
+  position: relative;
+  padding-left: 60px;
+
+  @include sp {
+    padding-left: 40px;
+  }
+
+  .ja {
+    font-size: 3.6rem;
+    font-weight: bold;
+    line-height: 1.4;
+
+    @include sp {
+      font-size: 2.4rem;
+    }
+  }
+
+  .en {
+    margin-top: 6px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1;
+    color: $main-color01;
+    padding-left: 6px;
+
+    @include sp {
+      font-size: 1.4rem;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 36.92px;
+    height: 43.3px;
+    background: url("../img/common/cake-dec.svg") no-repeat center center;
+    background-size: contain;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+// 左上に王冠あるタイトル
+.c-crown-ttl {
+  position: relative;
+  padding-left: 13px;
+
+  &::before {
+    display: block;
+    content: "";
+    mask-image: url(../img/common/crown-dec_left.svg);
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    width: 26px;
+    height: 13px;
+    position: absolute;
+    top: 3px;
+    left: 0;
+
+    @include sp() {
+      top: -4px;
+    }
+  }
+
+  &.lite_blown {
+    &::before {
+      background: $main_color01;
+    }
+
+    .c-crown-ttl__en {
+      color: $main_color01;
+    }
+  }
+
+  &.white {
+    &::before {
+      background: #fff;
+    }
+
+    .c-crown-ttl__en,
+    .c-crown-ttl__ja {
+      color: #fff;
+    }
+  }
+
+  &__en {
+    line-height: 1.4;
+
+    @include pc() {
+      font-size: 5.2rem;
+    }
+
+    @include sp() {
+      font-size: 3.2rem;
+    }
+  }
+
+  &__ja {
+    font-weight: bold;
+  }
+}
+
+// タイトル横に画像がある
+.c-dec-ttl {
+  padding-left: 30px;
+  position: relative;
+  font-weight: bold;
+
+  @include pc() {
+    font-size: 2rem;
+  }
+
+  @include sp() {
+    font-size: 1.6rem;
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+
+    @include sp() {
+      top: 0;
+    }
+  }
+
+  .small {
+    font-size: 1.6rem;
+
+    @include sp() {
+      font-size: 1.4rem;
+    }
+  }
+
+  &.card {
+    &::before {
+      background: url(../img/icon/icon-card.svg);
+    }
+  }
+
+  &.bank {
+    &::before {
+      background: url(../img/icon/icon-bank.svg);
+    }
+  }
+
+  &.paper {
+    &::before {
+      background: url(../img/icon/icon-paper.svg);
+    }
+  }
+
+  &.shop {
+    &::before {
+      background: url(../img/icon/icon-shop.svg);
+    }
+  }
+
+  &.stop {
+    &::before {
+      background: url(../img/icon/icon-stop.svg);
+    }
+  }
+
+  &.pen {
+    &::before {
+      background: url(../img/icon/icon-pen.svg);
+    }
+  }
+}
+
+.c-sec-ttl {
+  position: relative;
+  z-index: 3;
+
+  &__img {
+    width: 22rem;
+    height: 9.4rem;
+    margin: 0 auto;
+    @include sp() {
+      width: 12rem;
+      height: 5.4rem;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &__line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #d3b6ae;
+    margin-top: 10px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -20px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #d3b6ae;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      z-index: 2;
+      @include sp() {
+        left: -7px;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -20px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #d3b6ae;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      z-index: 2;
+      @include sp() {
+        right: -7px;
+      }
+    }
+  }
+
+  &__txt {
+    font-size: 2.6rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 34px;
+    @include sp() {
+      font-size: 1.8rem;
+      margin-top: 20px;
+    }
+  }
+}
+
+.c-sec-ttl02 {
+  &__en {
+    font-size: 5.7rem;
+    letter-spacing: 0;
+    @include sp() {
+      font-size: 3.2rem;
+    }
+  }
+  &__ja {
+    font-size: 2.1rem;
+    font-weight: bold;
+    @include sp() {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+//----------------------------------
+// テキスト
+//----------------------------------
+// ※つきテキスト
+.come-txt {
+  position: relative;
+  display: inline-block;
+  padding-left: 15px;
+  color: $brown;
+  opacity: 0.5;
+  line-height: 2.2;
+
+  &::before {
+    display: block;
+    content: "※";
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &.color_brown {
+    color: #4f2c1c;
+    opacity: 1;
+  }
+}
+
+//----------------------------------
+// セクション変わり目の背景の波線
+//----------------------------------
+.c-wave01 {
+  position: relative;
+  background: $brown;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: calc(100vw + 2px);
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% 100%;
+    transform: translateX(-50%);
+  }
+
+  // ガイドお支払い方法箇所
+  &.guide01 {
+    &::before {
+      bottom: initial;
+      top: -1%;
+    }
+
+    &::after {
+      top: -5%;
+    }
+  }
+
+  // 茶色の波
+  &::before {
+    aspect-ratio: 1512 / 300;
+    background-image: url("../img/common/wave_brown.svg");
+    transform: translateX(-50%) translateY(-28%);
+    z-index: 1;
+  }
+
+  // ゴールド線
+  &::after {
+    width: calc(100vw + 140px);
+    aspect-ratio: 1722 / 617;
+    background-image: url("../img/common/line01.svg");
+    transform: translateX(-50%) translateY(-22%);
+    z-index: 2;
+  }
+
+  // 背景茶色でうにょんがｖのじのような形
+  &.line_top {
+    &::before {
+      transform: translateX(-50%) translateY(-22%);
+    }
+    &::after {
+      width: calc(100vw + 140px);
+      aspect-ratio: 1280 / 387;
+      background-image: url("../img/common/line02.svg");
+      transform: translateX(-50%) translateY(-70%);
+      z-index: 2;
+    }
+  }
+}
+
+.c-wave02 {
+  position: relative;
+  background: #e6dcd2;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: calc(100vw + 2px);
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% 100%;
+    transform: translateX(-50%);
+  }
+
+  // グレーの波
+  &::before {
+    aspect-ratio: 1512 / 300;
+    background-image: url("../img/common/wave_gray.svg");
+    transform: translateX(-50%) translateY(-28%);
+    z-index: 1;
+  }
+
+  // ゴールド線
+  &::after {
+    width: calc(100vw + 140px);
+    aspect-ratio: 1585 / 244;
+    background-image: url("../img/common/line02.svg");
+    transform: translateX(-50%) translateY(-70%);
+    z-index: 2;
+  }
+}
+
+.c-wave03 {
+  position: relative;
+  background: #e6dcd2;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: calc(100vw + 2px);
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% 100%;
+    transform: translateX(-50%);
+  }
+
+  // ピンクの波
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: calc(100vw + 2px);
+    aspect-ratio: 1512 / 300;
+    transform: translateX(-50%) translateY(-65%);
+    pointer-events: none;
+    z-index: 1;
+
+    background: linear-gradient(
+      90deg,
+      #e1c4b6 0%,
+      #c7a592 40%,
+      #c29f8c 55%,
+      #b68e7c 75%,
+      #a27263 98%,
+      #a17061 100%
+    );
+
+    -webkit-mask: url("../img/common/wave-mask.svg") no-repeat center top / 100%
+      100%;
+    mask: url("../img/common/wave-mask.svg") no-repeat center top / 100% 100%;
+  }
+
+  // ゴールド線
+  &::after {
+    width: calc(100vw + 140px);
+    aspect-ratio: 1585 / 244;
+    background-image: url("../img/common/line02.svg");
+    transform: translateX(-50%) translateY(-70%);
+    z-index: 2;
+  }
+
+  // 背景の回転
+  &.bg_reverse {
+    &::before {
+      background: linear-gradient(
+        98.64deg,
+        #e1c4b6 -20.53%,
+        #c7a592 22.92%,
+        #c29f8c 39.22%,
+        #b68e7c 60.94%,
+        #a27263 85.93%,
+        #a17061 88.1%
+      );
+    }
+  }
+
+  // ピンクの波線でラインが上になる
+  &.line_top {
+    &::before {
+      top: 5%;
+
+      @include sp() {
+        top: 2%;
+      }
+    }
+
+    &::after {
+      top: -12%;
+      width: calc(100vw + 140px);
+      aspect-ratio: 1722 / 617;
+      background-image: url("../img/common/line01.svg");
+      transform: translateX(-50%);
+      z-index: 2;
+
+      @media (min-width: 1500px) {
+        top: -20%;
+      }
+
+      @include sp() {
+        top: -4%;
+      }
+    }
+  }
+}
+
+.c-wave04 {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    width: calc(100vw + 2px);
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% 100%;
+    transform: translateX(-50%);
+  }
+
+  // ピンクの波
+  &::before {
+    aspect-ratio: 1512 / 300;
+    background-image: url("../img/common/wave_pink02.svg");
+    transform: translateX(-50%) translateY(-28%);
+    z-index: 1;
+  }
+
+  // ゴールド線
+  &::after {
+    width: calc(100vw + 140px);
+    aspect-ratio: 1585 / 244;
+    background-image: url("../img/common/line02.svg");
+    transform: translateX(-50%) translateY(-70%);
+    z-index: 2;
+  }
+}
+.c-wave05 {
+  position: relative;
+  background: #e6dcd2;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: calc(100vw + 2px);
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% 100%;
+    transform: translateX(-50%);
+  }
+
+  // ピンクの波
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: calc(100vw + 2px);
+    aspect-ratio: 1512 / 300;
+    transform: translateX(-50%) translateY(-65%);
+    pointer-events: none;
+    z-index: 1;
+
+    background: linear-gradient(
+      270deg,
+      #e1c4b6 0%,
+      #c7a592 40%,
+      #c29f8c 55%,
+      #b68e7c 75%,
+      #a27263 98%,
+      #a17061 100%
+    );
+
+    -webkit-mask: url("../img/common/wave-mask.svg") no-repeat center top / 100%
+      100%;
+    mask: url("../img/common/wave-mask.svg") no-repeat center top / 100% 100%;
+  }
+
+  // ゴールド線
+  &::after {
+    width: calc(100vw + 140px);
+    aspect-ratio: 1585 / 244;
+    background-image: url("../img/common/line02.svg");
+    transform: translateX(-50%) translateY(-70%);
+    z-index: 2;
+  }
+
+  // 背景の回転
+  &.bg_reverse {
+    &::before {
+      background: linear-gradient(
+        98.64deg,
+        #e1c4b6 -20.53%,
+        #c7a592 22.92%,
+        #c29f8c 39.22%,
+        #b68e7c 60.94%,
+        #a27263 85.93%,
+        #a17061 88.1%
+      );
+    }
+  }
+
+  // ピンクの波線でラインが上になる
+  &.line_top {
+    &::before {
+      top: 5%;
+
+      @include sp() {
+        top: 2%;
+      }
+    }
+
+    &::after {
+      top: -12%;
+      width: calc(100vw + 140px);
+      aspect-ratio: 1722 / 617;
+      background-image: url("../img/common/line01.svg");
+      transform: translateX(-50%);
+      z-index: 2;
+
+      @media (min-width: 1500px) {
+        top: -20%;
+      }
+
+      @include sp() {
+        top: -4%;
+      }
+    }
+  }
+}
+
+.c-dec {
+  overflow-x: clip;
+
+  &__dec01,
+  &__dec02,
+  &__dec03,
+  &__dec04,
+  &__dec05,
+  &__dec06 {
+    position: absolute;
+    z-index: 1;
+    mix-blend-mode: screen;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &__dec01 {
+    top: -370px;
+    left: 0;
+    width: 313px;
+
+    @include sp {
+      width: 80px;
+      top: -83px;
+    }
+  }
+
+  &__dec02 {
+    top: -331px;
+    right: 0;
+    width: 402px;
+
+    @include sp {
+      width: 92px;
+      top: -98px;
+    }
+  }
+
+  &__dec03 {
+    top: -370px;
+    left: 0;
+    width: 313px;
+    mix-blend-mode: normal;
+
+    @include sp {
+      width: 80px;
+      top: -102px;
+    }
+  }
+
+  &__dec04 {
+    bottom: 100px;
+    right: 0;
+    width: 402px;
+
+    @include sp {
+      width: 92px;
+      bottom: 45px;
+    }
+  }
+
+  &__dec05 {
+    top: 765px;
+    left: 0;
+    width: 313px;
+    z-index: 6;
+
+    @include sp {
+      width: 80px;
+      top: 842px;
+    }
+  }
+
+  &__dec06 {
+    top: 395px;
+    right: 0;
+    width: 212px;
+    mix-blend-mode: normal;
+    z-index: 6;
+
+    @include sp {
+      width: 80px;
+      top: 232px;
+    }
+  }
+}
+
+//----------------------------------
+// パーツ
+//----------------------------------
+
+.c-line {
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    background: linear-gradient(to bottom, transparent 70%, #fff188 40%);
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    height: 26px;
+    z-index: -1;
+  }
+}
+.c-iframe {
+  aspect-ratio: 16 / 9;
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+.c-attention {
+  display: flex;
+  background: #fff;
+  border-radius: 10px;
+
+  @include pc() {
+    padding: 32px;
+  }
+
+  @include sp() {
+    padding: 16px;
+  }
+
+  &.brown {
+    padding: 14px;
+    color: #ab563e;
+    border: solid 1px #ab563e;
+    background: #ffeee9;
+  }
+  &__txt {
+    .ttl {
+      font-size: 1.8rem;
+      font-weight: bold;
+      line-height: 1.2;
+      @include sp() {
+        font-size: 1.6rem;
+      }
+    }
+    .small {
+      font-size: 1.4rem;
+      @include sp() {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+.c-price {
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  margin-top: 10px;
+  @include sp {
+    font-size: 1.4rem;
+  }
+  .price {
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0;
+    @include sp {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.c-mini-ribon {
+  display: block;
+  width: 100px;
+  height: 1px;
+  background-color: $main_color01;
+  position: relative;
+  &::after {
+    content: "";
+    width: 20px;
+    height: 17px;
+    background-image: url(../img/common/ribon.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+  }
+}
+
+//----------------------------------
+// 背景色
+//----------------------------------
+.c-bg-brown01 {
+  background: linear-gradient(
+    98.64deg,
+    #e1c4b6 -20.53%,
+    #c7a592 22.92%,
+    #c29f8c 39.22%,
+    #b68e7c 60.94%,
+    #a27263 85.93%,
+    #a17061 88.1%
+  );
+}
+.bg_img {
+    background-image: url(../img/common/side_bg.png);
+}
+//----------------------------------
+// ぱんくず
+//----------------------------------
+.c-bread {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+
+  &__item {
+    font-weight: 400;
+
+    a {
+      color: #4f2c1c;
+      text-decoration: underline;
+    }
+  }
+
+  &__item + &__item {
+    position: relative;
+
+    @include pc() {
+      margin-left: 26px;
+    }
+
+    @include sp() {
+      margin-left: 13px;
+    }
+
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -15px;
+      transform: translateY(-50%);
+      background: url(../img/common/arrow01.svg) no-repeat;
+      background-size: contain;
+      width: 5px;
+      height: 5px;
+      @include sp() {
+        left: -8px;
+      }
+    }
+  }
+}
+
+//----------------------------------
+// アンカー
+//----------------------------------
+.c-anker-list {
+  &.for {
+    @include pc() {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(4, 144px);
+      gap: 2.2rem;
+    }
+
+    @include sp() {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
+    }
+  }
+  &.col-3 {
+    @include pc() {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.2rem;
+    }
+
+    @include sp() {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+    }
+  }
+
+  &__li {
+  }
+
+  &__item {
+    background: #fff;
+    color: $brown;
+    position: relative;
+    display: block;
+    font-size: 1.3rem;
+    border-radius: 24px;
+    color: $main_color01;
+    transition: 0.5s ease;
+
+    @include pc() {
+      padding: 10px 24px;
+    }
+
+    @include sp() {
+      padding: 10px;
+    }
+
+    &::before {
+      display: block;
+      content: "";
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      background: $main_color01;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      left: 14px;
+      transform: translateY(-50%);
+      transition: 0.5s ease;
+    }
+
+    &.order {
+      &::before {
+        mask-image: url(../img/icon/icon-order.svg);
+      }
+    }
+
+    &.pay {
+      &::before {
+        mask-image: url(../img/icon/icon-pay.svg);
+      }
+    }
+
+    &.delivery {
+      &::before {
+        mask-image: url(../img/icon/icon-delivery.svg);
+      }
+    }
+
+    &.rule {
+      &::before {
+        mask-image: url(../img/icon/icon-rule.svg);
+      }
+    }
+
+    &:hover {
+      @media (any-hover: hover) {
+        background: $main_color01;
+        color: #fff;
+        outline: 2px solid #fff;
+
+        &::before {
+          background: #fff;
+        }
+
+        .c-anker-list__txt {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &__txt {
+    color: $main_color01;
+    padding-left: 25px;
+    transition: 0.5s ease;
+
+    @include sp() {
+      padding-left: 40px;
+    }
+  }
+}
+
+//----------------------------------
+// リスト
+//----------------------------------
+
+.c-category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+
+  &__item {
+  }
+
+  &__link {
+    display: block;
+    width: fit-content;
+    padding: 10px 24px;
+    background: #fff;
+    color: $main_color01;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    @include sp() {
+      font-size: 1.2rem;
+    }
+
+    &:hover {
+      background: $main_color01;
+      color: #fff;
+    }
+    &.is-active {
+      background: $main_color01 !important;
+      color: #fff !important;
+    }
+  }
+
+  &.is-brown {
+    gap: 2.2rem;
+    justify-content: center;
+    @include sp() {
+      gap: 1.2rem;
+    }
+    .c-category-list__link {
+      background: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+      font-size: 1.3rem;
+
+      @include sp {
+        padding: 6px 10px;
+        font-size: 1.1rem;
+      }
+
+      &:hover {
+        background: #ab563e;
+        color: #fff;
+      }
+    }
+  }
+  &.is-small {
+    gap: 1.2rem;
+    @include sp() {
+      gap: 0.8rem;
+    }
+    .c-category-list__link {
+      padding: 6px 10px;
+      font-size: 1.3rem;
+
+      @include sp {
+        padding: 4px 8px;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+.c-category-list02 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  @include sp() {
+    gap: .4rem;
+  }
+
+  &__item {
+    display: block;
+    width: fit-content;
+    padding: 6px 10px;
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    &.pink {
+      color: $main_color01;
+      border-color: $main_color01;
+    }
+  }
+}
+
+.c-product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+
+  @include sp {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+  }
+
+  &__link {
+    display: block;
+    color: #fff;
+    transition: all 0.3s ease;
+
+    &:hover {
+      .c-product-list__img {
+        &::after {
+          background: rgba(0, 0, 0, 0);
+        }
+
+        .c-product-list__btn {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 275 / 420;
+    }
+  }
+
+  &__txtArea {
+    padding: 0 20px 26px;
+    position: absolute;
+    bottom: 0;
+
+    @include sp {
+      padding: 0 10px 16px;
+    }
+  }
+
+  &__ttl {
+    font-size: 1.9rem;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    margin-top: 12px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include sp {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__price {
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1;
+    margin-top: 12px;
+
+    @include sp {
+      font-size: 1.8rem;
+    }
+
+    .small01 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 1;
+
+      @include sp {
+        font-size: 1.4rem;
+      }
+    }
+
+    .small02 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      line-height: 1;
+
+      @include sp {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  &__txt {
+    font-size: 1.3rem;
+    font-weight: normal;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+    margin-top: 16px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include sp {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__btn {
+    padding: 14px;
+    text-align: center;
+    background: $brown;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    margin-top: 16px;
+    transition: all 0.3s ease;
+
+    @include sp {
+      padding: 10px;
+      font-size: 1.2rem;
+      margin-top: 8px;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+// プランAB横並びリスト
+.c-ab-list {
+  @include pc() {
+    display: flex;
+    gap: 3.2rem;
+  }
+
+  @include sp() {
+  }
+
+  &__li {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px $main_color01;
+    border-radius: 8px;
+    background: #fff;
+  }
+
+  &__li + &__li {
+    @include sp() {
+      margin-top: 16px;
+    }
+  }
+
+  &__box {
+    @include pc() {
+      padding: 30px 40px;
+    }
+
+    @include sp() {
+      padding: 15px;
+    }
+  }
+
+  &__top {
+    border-bottom: solid 1px $main_color01;
+
+    @include pc() {
+      padding-bottom: 27px;
+    }
+
+    @include sp() {
+      padding-bottom: 13px;
+    }
+  }
+
+  &__sub {
+    font-size: 1.4rem;
+    color: $main_color01;
+    letter-spacing: 0.03em;
+
+    .big {
+      padding-left: 1px;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__ttl {
+    font-weight: bold;
+    color: $brown;
+
+    @include pc() {
+      font-size: 2.6rem;
+    }
+
+    @include sp() {
+      font-size: 2rem;
+    }
+  }
+
+  &__cap {
+    font-weight: bold;
+    color: $brown;
+    font-size: 1.4rem;
+  }
+
+  &__bottom {
+    @include pc() {
+      padding-top: 27px;
+    }
+
+    @include sp() {
+      padding-top: 13px;
+    }
+  }
+}
+
+// 数字カウンターつきリスト
+.c-num-list {
+  counter-reset: num;
+
+  &__li {
+  }
+
+  &__li + &__li {
+    @include pc() {
+      margin-top: 18px;
+    }
+
+    @include sp() {
+      margin-top: 9px;
+    }
+  }
+
+  &__top {
+    line-height: 2.2;
+  }
+
+  &__num {
+    position: relative;
+
+    &::before {
+      content: counter(num);
+      counter-increment: num 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $main_color01;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 100%;
+      color: #fff;
+
+      @include pc() {
+        width: 32px;
+        height: 32px;
+      }
+
+      @include sp() {
+        width: 24px;
+        height: 24px;
+        font-size: 1.2rem;
+        top: 5px;
+      }
+    }
+  }
+
+  &__ttl {
+    font-size: 1.6rem;
+    font-weight: bold;
+
+    @include pc() {
+      padding-left: 50px;
+    }
+
+    @include sp() {
+      padding-left: 32px;
+    }
+  }
+
+  &__bottom {
+    line-height: 2.2;
+
+    @include pc() {
+      padding-left: 50px;
+    }
+
+    @include sp() {
+      padding-left: 32px;
+    }
+  }
+
+  &__txt {
+    @include pc() {
+      font-size: 1.4rem;
+    }
+
+    @include sp() {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__note {
+    font-size: 1.2rem;
+    color: $brown;
+    opacity: 0.5;
+  }
+}
+// 数字箇所を画像使用しているリスト
+.c-num-list02 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.1rem;
+  @include sp() {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  &__li {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    gap: 0.5rem;
+  }
+  &__num {
+    text-align: center;
+    @include sp() {
+      height: 4rem;
+      img {
+        width: 4rem;
+      }
+    }
+  }
+  &__ttl {
+    text-align: center;
+    padding: 17px;
+    font-size: 2.3rem;
+    font-weight: bold;
+    letter-spacing: 0;
+    @include sp() {
+      font-size: 1.8rem;
+      padding: 1rem;
+    }
+  }
+  &__capwrap {
+    padding: 18px 40px 18px 30px;
+    @include sp() {
+      padding: 15px;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__ttl,
+  &__capwrap {
+    background: rgba(171, 86, 62, 0.5);
+    color: #4f2c1c;
+  }
+  &__cap {
+    letter-spacing: 0;
+    @include sp() {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+// ガイドページに主に使っているリスト
+.c-way-list {
+  &__li {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 10px;
+
+    @include pc() {
+      padding: 32px;
+    }
+
+    @include sp() {
+      padding: 16px;
+    }
+
+    &.red {
+      padding: 14px;
+      color: #e44343;
+      border: solid 1px #e44343;
+      background: #ffeded;
+    }
+  }
+
+  &__li + &__li {
+    @include pc() {
+      margin-top: 40px;
+    }
+
+    @include sp() {
+      margin-top: 20px;
+    }
+  }
+
+  &__box {
+  }
+
+  &__ttl {
+  }
+
+  &__cap {
+    line-height: 2.2;
+    font-weight: 400;
+
+    @include pc() {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__map {
+    @include pc() {
+      margin-top: 20px;
+    }
+
+    @include sp() {
+      margin-top: 10px;
+    }
+
+    iframe {
+      aspect-ratio: 142 / 35;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__bottom {
+    border: solid 1px $brown;
+    border-radius: 6px;
+    background: #f8f1ef;
+
+    @include pc() {
+      padding: 24px 20px;
+    }
+
+    @include sp() {
+      padding: 12px;
+    }
+  }
+
+  &__bottom-txt {
+    line-height: 2.2;
+    font-size: 1.4rem;
+    font-weight: 400;
+
+    &.bold {
+      font-weight: bold;
+    }
+
+    &.small {
+      font-size: 1.2rem;
+    }
+
+    &.usui {
+      opacity: 0.5;
+      color: #4f2c1c;
+    }
+
+    &.center {
+      text-align: center;
+    }
+  }
+
+  &__note {
+    position: relative;
+    padding-left: 37px;
+    line-height: 2.2;
+    font-size: 1.4rem;
+    letter-spacing: 0.03em;
+
+    &::before {
+      display: block;
+      content: "";
+      background: url(../img/icon/icon-exclamation.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      top: 3px;
+      left: 0;
+    }
+
+    &.icon_note {
+      &::before {
+        background: url(../img/icon/icon-note.svg);
+      }
+    }
+  }
+
+  &__note-cap {
+    font-weight: 400;
+    padding-left: 37px;
+    font-size: 1.4rem;
+    line-height: 2.2;
+    letter-spacing: 0.03em;
+  }
+}
+
+// ドットのあるリスト
+.c-dot-list {
+  &__li {
+    position: relative;
+    padding-left: 8px;
+    line-height: 2.2;
+    letter-spacing: 0.03em;
+    font-weight: 400;
+
+    &::before {
+      display: block;
+      content: "";
+      width: 3px;
+      height: 3px;
+      border-radius: 100%;
+      background: $brown;
+      position: absolute;
+      top: 13px;
+      left: 0;
+    }
+  }
+}
+
+// プラポリ等に使っているシンプルなリスト
+.c-simple-list {
+  li + li {
+    margin-top: 32px;
+    @include sp() {
+      margin-top: 24px;
+    }
+  }
+  &__ttl {
+    font-size: 1.8rem;
+    font-weight: bold;
+    @include sp() {
+      font-size: 1.4rem;
+    }
+  }
+  &__txt {
+    font-size: 1.4rem;
+    margin-top: 5px;
+    @include sp() {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+  &.faq-list {
+    li + li {
+      margin-top: 24px;
+      @include sp() {
+        margin-top: 16px;
+      }
+    }
+    .c-simple-list__ttl {
+      padding-left: 2em;
+      text-indent: -2em;
+    }
+    .c-simple-list__txt {
+      padding-left: 3em;
+      text-indent: -2em;
+      @include sp() {
+        margin-top: 0;
+      }
+    }
+    .question {
+      font-size: 3rem;
+      color: $main_color01;
+      @include sp() {
+        font-size: 2.4rem;
+      }
+    }
+    .answer {
+      font-size: 2.4rem;
+      @include sp() {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+//----------------------------------
+// ボタン
+//----------------------------------
+.c-btn01 {
+  display: inline-block;
+  padding: 20px 70px;
+  background: #6d4a39;
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  &.back {
+    background: #979797;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.c-btn-view-more {
+  font-family: "Poppins", sans-serif;
+  display: block;
+  width: fit-content;
+  font-size: 2.1rem;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  color: #d3b6ae;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  @include sp() {
+    font-size: 1.8rem;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -23px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../img/common/line-white.svg) no-repeat;
+    background-size: contain;
+    width: 120%;
+    height: 20px;
+    margin-left: 10px;
+    transition: all 0.3s ease-in-out;
+    @include sp() {
+      height: 1.6rem;
+    }
+  }
+  &.is-brown {
+    color: $brown;
+
+    &::after {
+      background: url(../img/common/line-brown.svg) no-repeat;
+      background-size: contain;
+    }
+  }
+  &.is-brown02 {
+    color: #ab563e;
+    &::after {
+      background: url(../img/common/line-view-long.svg) no-repeat;
+      background-size: contain;
+      width: 100%;
+      margin-left: 0;
+      @include sp() {
+        bottom: -2.5rem;
+      }
+    }
+  }
+
+  &.non_left {
+    &::after {
+      margin-left: 0;
+    }
+  }
+
+  &:hover {
+    @media (any-hover: hover) {
+      transform: translateY(3px);
+      &::after {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+.c-goldline-btn {
+  position: relative;
+  display: inline-block;
+  padding: 18px 65px;
+  border-radius: 60px;
+  line-height: 1.2;
+  z-index: 0;
+  width: 100%;
+  transition: all 0.3s ease;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 0;
+    background: rgba(72, 38, 27, 0.75);
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    z-index: -2;
+    transition: all 0.3s ease;
+  }
+
+  &__line {
+    display: block;
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border-radius: inherit;
+    padding: 2px;
+    z-index: 1;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    background: linear-gradient(90deg, #e1cf59 0%, #f7f9e4 50%, #7b7940 100%);
+  }
+
+  &__en,
+  &__ja {
+    display: block;
+    text-align: center;
+    z-index: 2;
+    color: #d8beb5;
+  }
+  &__en {
+    font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    @include sp() {
+      font-size: 2rem;
+    }
+  }
+  &__ja {
+    font-size: 1.6rem;
+    @include sp() {
+      font-size: 1.4rem;
+    }
+  }
+
+  &:hover {
+    @media (any-hover: hover) {
+      transform: translateY(3px);
+      &::after {
+        content: "";
+        background: transparent;
+      }
+    }
+  }
+
+  &.litebrown {
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: #a05b44;
+      z-index: -1;
+    }
+  }
+  &.brown {
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: #684b3c;
+      z-index: -1;
+    }
+  }
+}
+
+//----------------------------------
+// CTA部分
+//----------------------------------
+
+.c-cta {
+  &.c-wave04 {
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      @include sp {
+        transform: translateX(-50%) translateY(-70%);
+      }
+    }
+  }
+
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 200px;
+  isolation: isolate;
+
+  @include sp {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+
+  &__grad {
+    position: absolute;
+    top: 590px;
+    left: 50%;
+    z-index: 2;
+    width: 100vw;
+    transform: translateX(-50%);
+    pointer-events: none;
+
+    @include min(1866) {
+      top: 436px;
+    }
+
+    @include max(1200) {
+      top: 652px;
+    }
+
+    @include max(825) {
+      top: 792px;
+    }
+
+    @include max(766) {
+      top: 647px;
+    }
+
+    @include max(660) {
+      top: 655px;
+    }
+
+    @include max(480) {
+      top: 755px;
+    }
+
+    @include max(379) {
+      top: 850px;
+    }
+
+    @include max(352) {
+      top: 870px;
+    }
+
+    // 上側のグラデーション背景
+    &::before {
+      content: "";
+      position: absolute;
+      top: -524px;
+      left: 50%;
+      width: 100vw;
+      height: 549px; // ここ調整
+      transform: translateX(-50%);
+      z-index: 1;
+      pointer-events: none;
+      background: linear-gradient(
+        90deg,
+        #a17061 0%,
+        #a27263 2%,
+        #b68e7c 25%,
+        #c29f8c 45%,
+        #c7a592 60%,
+        #e1c4b6 100%
+      );
+    }
+
+    // ピンクの丸背景SVG
+    img {
+      position: relative;
+      z-index: 2;
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    @include max(1200) {
+      &::before {
+        top: -800px;
+        height: 800px;
+      }
+    }
+
+    @media (829px <= width <= 1199px) {
+      &::before {
+        top: -65vw;
+      }
+    }
+
+    @include max(732) {
+      &::before {
+        top: -702px;
+        height: 790px;
+      }
+    }
+
+    @include max(486) {
+      &::before {
+        top: -841px;
+        height: 922px;
+      }
+    }
+
+    @include max(403) {
+      &::before {
+        top: -838px;
+        height: 862px;
+      }
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 4;
+    width: 1530px;
+    transform: translateX(-50%);
+    pointer-events: none;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__bg02 {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 900px;
+    transform: translateX(-50%);
+    background: url("../img/common/cta-bg.svg") no-repeat center bottom / cover;
+    pointer-events: none;
+  }
+
+  &__curve {
+    position: absolute;
+    left: 50%;
+
+    z-index: 2;
+    width: 100vw;
+    transform: translateX(-50%);
+    pointer-events: none;
+    bottom: -467px;
+
+    @media only screen and (max-width: 1600px) and (min-width: 1501px) {
+      bottom: -400px;
+    }
+
+    @media only screen and (max-width: 1500px) and (min-width: 1401px) {
+      bottom: -400px;
+    }
+
+    @media only screen and (max-width: 1400px) and (min-width: 1301px) {
+      bottom: -366px;
+    }
+
+    @media only screen and (max-width: 1300px) and (min-width: 1201px) {
+      bottom: -338px;
+    }
+
+    @media only screen and (max-width: 1200px) and (min-width: 1101px) {
+      bottom: -317px;
+    }
+
+    @media only screen and (max-width: 1100px) and (min-width: 1001px) {
+      bottom: -289px;
+    }
+
+    @media only screen and (max-width: 1000px) and (min-width: 901px) {
+      bottom: -274px;
+    }
+
+    @media only screen and (max-width: 900px) and (min-width: 768px) {
+      bottom: -221px;
+    }
+
+    @include max(767) {
+      bottom: -218px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__ico,
+  .inner-block02,
+  &__bonbon {
+    position: relative;
+    z-index: 4;
+  }
+
+  &__ico {
+    display: block;
+    width: 67.35px;
+    margin: 0 auto;
+    mix-blend-mode: multiply;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 4;
+    top: 60px;
+    margin: 0 auto;
+
+    @include sp {
+      top: 103px;
+    }
+  }
+
+  &__txt {
+    position: relative;
+    z-index: 6;
+    margin-top: 35.32px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    line-height: 2.2;
+    letter-spacing: 0.1em;
+    text-align: center;
+
+    @include sp {
+      font-size: 1.8rem;
+      margin-top: 25px;
+    }
+  }
+
+  &__bonbon {
+    width: 266px;
+    margin: 45px auto 0;
+    padding-left: 20px;
+    mix-blend-mode: normal;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      mix-blend-mode: multiply;
+      filter: saturate(1.75) contrast(0.95);
+    }
+  }
+
+  &__cta {
+    position: relative;
+
+    text-align: center;
+  }
+
+  &__ctaTxt {
+    position: relative;
+    font-size: 1.8rem;
+    line-height: 2;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: #fff;
+    text-align: center;
+    z-index: 6;
+
+    @include sp {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__btns {
+    position: relative;
+    z-index: 6;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 24px;
+
+    @include sp {
+      gap: 1.2rem;
+      margin-top: 16px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    min-height: 48px;
+    border-radius: 999px;
+    background: #886859;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1;
+
+    @include sp {
+      width: 150px;
+      font-size: 1.4rem;
+      padding: 8px 0;
+    }
+
+    .en {
+      margin-top: 6px;
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+  }
+
+  &__telArea {
+    position: relative;
+    z-index: 4;
+    margin-top: 275px;
+    text-align: center;
+
+    @include max(1200) {
+      margin-top: 200px;
+    }
+
+    @include sp {
+      margin-top: 124px;
+    }
+  }
+
+  &__tel {
+    font-size: 5rem;
+    line-height: 1;
+    letter-spacing: 0.08em;
+
+    @include sp {
+      font-size: 3.6rem;
+    }
+  }
+
+  &__note {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    letter-spacing: 0.08em;
+  }
+
+  &__bear {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    width: min(28vw, 540px);
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+//----------------------------------
+// テーブル
+//----------------------------------
+
+// 角丸のテーブル
+.c-table {
+  width: 100%;
+  border: 1px solid #4f2c1c;
+  border-collapse: separate;
+  border-radius: 10px;
+  border-spacing: 0;
+  overflow: hidden;
+
+  &.ptn-col1 {
+    @include sp() {
+      th,
+      td {
+        display: block;
+        width: 100%;
+      }
+      td {
+        border-left: none;
+      }
+    }
+    td {
+      text-align: left;
+    }
+  }
+  tr {
+    &:first-child {
+      * {
+        border-top: none;
+      }
+
+      th {
+        font-weight: bold;
+      }
+    }
+
+    &:last-child {
+      * {
+        border-bottom: none;
+      }
+    }
+
+    * {
+      &:first-child {
+        border-left: none;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    td {
+      &:nth-child(2) {
+        font-weight: bold;
+      }
+    }
+    &:nth-child(even) {
+      th {
+        background: #f2dcd7;
+      }
+    }
+  }
+
+  tr + tr {
+    th,
+    td {
+      border-top: 1px solid #4f2c1c;
+    }
+  }
+
+  th {
+    text-align: center;
+    width: 50%;
+    font-weight: bold;
+
+    &:first-child {
+      background: #d3b6ae;
+    }
+
+    &:last-child {
+      background: #f2dcd7;
+    }
+  }
+
+  td {
+    text-align: center;
+    width: 50%;
+  }
+
+  th,
+  td {
+    padding: 14px;
+    font-weight: 400;
+  }
+
+  th + th,
+  td + td,
+  th + td {
+    border-left: 1px solid #4f2c1c;
+  }
+
+  th:last-child,
+  td:last-child {
+    border-right: none;
+  }
+}
+
+//----------------------------------
+// js
+//----------------------------------
+.js-tab-trigger {
+  cursor: pointer;
+}
+.js-tab-content {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}

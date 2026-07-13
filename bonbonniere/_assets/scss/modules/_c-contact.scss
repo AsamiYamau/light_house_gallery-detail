@@ -1,0 +1,264 @@
+@use "../mixin/mixin" as *;
+@use "../setting/setting" as *;
+
+.c-contact {
+  &__section {
+    margin-top: 6rem;
+    @include sp() {
+      margin-top: 3rem;
+    }
+  }
+
+  &__section-num {
+    color: #b8945f;
+    font-size: 4rem;
+    line-height: 1;
+  }
+
+  &__section-title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    @include sp() {
+      font-size: 2rem;
+    }
+  }
+  &__section-text {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+  }
+
+  &__field {
+    margin-top: 32px;
+  }
+
+  &__field-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1rem;
+  }
+
+  &__label {
+    display: block;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 0.8rem;
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    em {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 3.6rem;
+      min-height: 1.8rem;
+      padding: 0 0.7rem;
+      border-radius: 2px;
+      background: #b89a8c;
+      color: #fff;
+      font-size: 1rem;
+      font-style: normal;
+      line-height: 1;
+
+      &.is-required {
+        background: #ed2438;
+      }
+    }
+  }
+
+  &__input {
+    height: 56px;
+    padding: 0 20px;
+    font-size: 13px;
+  }
+
+  &__textarea {
+    padding: 20px;
+    resize: vertical;
+    line-height: 2;
+  }
+  &__input,
+  &__textarea {
+    border: 1px solid $main_color01;
+    color: $brown;
+    font-size: 13px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  &__radio-list {
+    font-size: 1.4rem;
+    label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 56px;
+      padding: 0 20px;
+      border: 1px solid $main_color01;
+      border-radius: 4px;
+      transition: $transition01;
+      &:hover {
+        @include pc() {
+          background: rgba(#c89f65, 0.05);
+        }
+      }
+
+      &:not(:first-child) {
+        margin-top: 12px;
+      }
+    }
+    input {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $main_color01;
+      border-radius: 50%;
+      background: #fff;
+      position: relative;
+      &:checked {
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 14px;
+          height: 14px;
+          border-radius: 50%;
+          background: $main_color01;
+        }
+      }
+    }
+  }
+
+  &__upload {
+    margin-top: 32px;
+  }
+
+  &__upload-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 200px;
+    padding: 0 20px;
+    border: 1px solid $main_color01;
+    border-radius: 4px;
+    background: #fff;
+    color: $main_color01;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.6;
+    text-align: center;
+    cursor: pointer;
+    transition: $transition01;
+    position: relative;
+
+    @include sp() {
+      min-height: 120px;
+    }
+
+    &:hover {
+      @include pc() {
+        background: rgba($main_color01, 0.08);
+      }
+    }
+
+    &.is-dragover {
+      border-color: #c89f65;
+      background: rgba($main_color01, 0.08);
+    }
+    .error {
+      display: none !important;
+    }
+  }
+
+  &__upload-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__upload-icon {
+    margin-bottom: 8px;
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  &__upload-text {
+    line-height: 1.6;
+  }
+
+  &__upload-note {
+    font-size: 1.2rem;
+    color: #999;
+  }
+  &__submit {
+    text-align: center;
+  }
+  &__note {
+    font-size: 1.2rem;
+  }
+  &__tel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .ico {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.hidden_radio {
+  display: none;
+  + span {
+    display: none;
+  }
+}
+.mw_wp_form_confirm {
+  .c-contact__upload-label {
+    all: unset;
+    > span {
+      display: none;
+    }
+  }
+  .confirm-none {
+    display: none;
+  }
+  .hidden_radio {
+    display: block;
+    + span {
+      display: block;
+    }
+  }
+}
+
+.c-kome {
+  margin-top: 0.4rem;
+  color: rgba($brown, 0.7);
+  font-size: 1.2rem !important;
+  line-height: 1.8;
+  font-weight: 400 !important;
+  a {
+    text-decoration: underline;
+  }
+}
+
+.mw_wp_form {
+    .error {
+      font-size: 1.4rem !important;
+      line-height: 1.8;
+    }
+}
