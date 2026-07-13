@@ -5,24 +5,25 @@
   <meta charset="utf-8">
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width">
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <base href="../">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
   <title>ギャラリー | こだわりビュッフェを、カジュアルに。</title>
   <meta name="keywords" content="">
   <meta name="description" content="">
 
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
   <div id="wrapper">
 
-    <!--#include virtual="/inc/header.html" -->
+    <!--#include virtual="../inc/header.html" -->
 
     <div class="l-main">
       <div class="l-main__side pc">
-        <!--#include virtual="/inc/sidebar.html" -->
+        <!--#include virtual="../inc/sidebar.html" -->
       </div>
 
       <div class="l-main__main">
@@ -30,7 +31,7 @@
 
           <section class="l-mv">
             <div class="l-mv__img">
-              <img src="/img/blog/blog-top.jpg" alt="">
+              <img src="img/blog/blog-top.jpg" alt="">
             </div>
             <div class="l-mv__txt">
               <div class="inner-block02">
@@ -46,7 +47,7 @@
             <div class="inner-block">
               <ul class="c-bread-list">
                 <li class="c-bread-list__li">
-                  <a href="/" class="c-bread-list__item">トップページ</a>
+                  <a href="./" class="c-bread-list__item">トップページ</a>
                 </li>
                 <li class="c-bread-list__li">
                   <span class="c-bread-list__txt">ギャラリー</span>
@@ -65,78 +66,90 @@
               </div>
 
               <ul class="l-gallery-list">
-                <li class="l-gallery-list__item js-modal-btn" data-gallery="gallery_1">
-                  <div class="l-gallery-list__img">
-                    <img src="/img/home/home_scene_list01.jpg" alt="">
-                  </div>
-                  <div class="l-gallery-list__txt">
-                    <div class="l-gallery-list__txt-box">
-                      <div class="ttl">華やかなレセプションパーティー</div>
-                      <div class="txt">企業様のレセプションにて、フィンガーフードを中心にしたビュッフェスタイルでご用意しました。</div>
+                <li class="l-gallery-list__item">
+                  <a href="gallery/detail/" class="l-gallery-list__link">
+                    <div class="l-gallery-list__img">
+                      <img src="img/home/home_scene_list01.jpg" alt="">
                     </div>
-                  </div>
+                    <div class="l-gallery-list__txt">
+                      <div class="l-gallery-list__txt-box">
+                        <div class="ttl">華やかなレセプションパーティー</div>
+                        <div class="txt">企業様のレセプションにて、フィンガーフードを中心にしたビュッフェスタイルでご用意しました。</div>
+                      </div>
+                    </div>
+                  </a>
                 </li>
-                <li class="l-gallery-list__item js-modal-btn" data-gallery="gallery_2">
-                  <div class="l-gallery-list__img">
-                    <img src="/img/home/home_scene_list02.jpg" alt="">
-                  </div>
-                  <div class="l-gallery-list__txt">
-                    <div class="l-gallery-list__txt-box">
-                      <div class="ttl">懇親会向けビュッフェ</div>
-                      <div class="txt">交流の時間を楽しめるよう、取り分けやすさと彩りを意識した料理を揃えました。</div>
+                <li class="l-gallery-list__item">
+                  <a href="gallery/detail/" class="l-gallery-list__link">
+                    <div class="l-gallery-list__img">
+                      <img src="img/home/home_scene_list02.jpg" alt="">
                     </div>
-                  </div>
+                    <div class="l-gallery-list__txt">
+                      <div class="l-gallery-list__txt-box">
+                        <div class="ttl">懇親会向けビュッフェ</div>
+                        <div class="txt">交流の時間を楽しめるよう、取り分けやすさと彩りを意識した料理を揃えました。</div>
+                      </div>
+                    </div>
+                  </a>
                 </li>
-                <li class="l-gallery-list__item js-modal-btn" data-gallery="gallery_3">
-                  <div class="l-gallery-list__img">
-                    <img src="/img/home/home_scene_list03.jpg" alt="">
-                  </div>
-                  <div class="l-gallery-list__txt">
-                    <div class="l-gallery-list__txt-box">
-                      <div class="ttl">表彰式後のパーティー</div>
-                      <div class="txt">フォーマルな雰囲気にも合うよう、上品な盛り付けと食べやすいメニューで構成しました。</div>
+                <li class="l-gallery-list__item">
+                  <a href="gallery/detail/" class="l-gallery-list__link">
+                    <div class="l-gallery-list__img">
+                      <img src="img/home/home_scene_list03.jpg" alt="">
                     </div>
-                  </div>
+                    <div class="l-gallery-list__txt">
+                      <div class="l-gallery-list__txt-box">
+                        <div class="ttl">表彰式後のパーティー</div>
+                        <div class="txt">フォーマルな雰囲気にも合うよう、上品な盛り付けと食べやすいメニューで構成しました。</div>
+                      </div>
+                    </div>
+                  </a>
                 </li>
-                <li class="l-gallery-list__item js-modal-btn" data-gallery="gallery_4">
-                  <div class="l-gallery-list__img">
-                    <img src="/img/home/home_scene_list04.jpg" alt="">
-                  </div>
-                  <div class="l-gallery-list__txt">
-                    <div class="l-gallery-list__txt-box">
-                      <div class="ttl">社内イベントの軽食</div>
-                      <div class="txt">短時間のイベントでも手に取りやすい、軽食中心のビュッフェをご用意しました。</div>
+                <li class="l-gallery-list__item">
+                  <a href="gallery/detail/" class="l-gallery-list__link">
+                    <div class="l-gallery-list__img">
+                      <img src="img/home/home_scene_list04.jpg" alt="">
                     </div>
-                  </div>
+                    <div class="l-gallery-list__txt">
+                      <div class="l-gallery-list__txt-box">
+                        <div class="ttl">社内イベントの軽食</div>
+                        <div class="txt">短時間のイベントでも手に取りやすい、軽食中心のビュッフェをご用意しました。</div>
+                      </div>
+                    </div>
+                  </a>
                 </li>
-                <li class="l-gallery-list__item js-modal-btn" data-gallery="gallery_5">
-                  <div class="l-gallery-list__img">
-                    <img src="/img/home/home_scene_list05.jpg" alt="">
-                  </div>
-                  <div class="l-gallery-list__txt">
-                    <div class="l-gallery-list__txt-box">
-                      <div class="ttl">ドリンク付き交流会</div>
-                      <div class="txt">フードとドリンクの導線を分け、ゲストが移動しやすい会場づくりを行いました。</div>
+                <li class="l-gallery-list__item">
+                  <a href="gallery/detail/" class="l-gallery-list__link">
+                    <div class="l-gallery-list__img">
+                      <img src="img/home/home_scene_list05.jpg" alt="">
                     </div>
-                  </div>
+                    <div class="l-gallery-list__txt">
+                      <div class="l-gallery-list__txt-box">
+                        <div class="ttl">ドリンク付き交流会</div>
+                        <div class="txt">フードとドリンクの導線を分け、ゲストが移動しやすい会場づくりを行いました。</div>
+                      </div>
+                    </div>
+                  </a>
                 </li>
-                <li class="l-gallery-list__item js-modal-btn" data-gallery="gallery_6">
-                  <div class="l-gallery-list__img">
-                    <img src="/img/home/home_scene_list06.jpg" alt="">
-                  </div>
-                  <div class="l-gallery-list__txt">
-                    <div class="l-gallery-list__txt-box">
-                      <div class="ttl">カジュアルパーティー</div>
-                      <div class="txt">親しみやすいメニューを中心に、会場全体が明るく見える料理台を設営しました。</div>
+                <li class="l-gallery-list__item">
+                  <a href="gallery/detail/" class="l-gallery-list__link">
+                    <div class="l-gallery-list__img">
+                      <img src="img/home/home_scene_list06.jpg" alt="">
                     </div>
-                  </div>
+                    <div class="l-gallery-list__txt">
+                      <div class="l-gallery-list__txt-box">
+                        <div class="ttl">カジュアルパーティー</div>
+                        <div class="txt">親しみやすいメニューを中心に、会場全体が明るく見える料理台を設営しました。</div>
+                      </div>
+                    </div>
+                  </a>
                 </li>
               </ul>
 
               <div class="l-gallery-modal js-modal-body" data-gallery="gallery_1" style="display: none;">
                 <div class="l-gallery-modal__inner modal-cont">
                   <div class="l-gallery-modal__img">
-                    <img src="/img/home/home_scene_list01.jpg" alt="">
+                    <img src="img/home/home_scene_list01.jpg" alt="">
                   </div>
                   <div class="l-gallery-modal__txt">
                     <div class="l-gallery-modal__txt-box">
@@ -183,7 +196,7 @@
               <div class="l-gallery-modal js-modal-body" data-gallery="gallery_2" style="display: none;">
                 <div class="l-gallery-modal__inner modal-cont">
                   <div class="l-gallery-modal__img">
-                    <img src="/img/home/home_scene_list02.jpg" alt="">
+                    <img src="img/home/home_scene_list02.jpg" alt="">
                   </div>
                   <div class="l-gallery-modal__txt">
                     <div class="l-gallery-modal__txt-box">
@@ -202,7 +215,7 @@
               <div class="l-gallery-modal js-modal-body" data-gallery="gallery_3" style="display: none;">
                 <div class="l-gallery-modal__inner modal-cont">
                   <div class="l-gallery-modal__img">
-                    <img src="/img/home/home_scene_list03.jpg" alt="">
+                    <img src="img/home/home_scene_list03.jpg" alt="">
                   </div>
                   <div class="l-gallery-modal__txt">
                     <div class="l-gallery-modal__txt-box">
@@ -221,7 +234,7 @@
               <div class="l-gallery-modal js-modal-body" data-gallery="gallery_4" style="display: none;">
                 <div class="l-gallery-modal__inner modal-cont">
                   <div class="l-gallery-modal__img">
-                    <img src="/img/home/home_scene_list04.jpg" alt="">
+                    <img src="img/home/home_scene_list04.jpg" alt="">
                   </div>
                   <div class="l-gallery-modal__txt">
                     <div class="l-gallery-modal__txt-box">
@@ -240,7 +253,7 @@
               <div class="l-gallery-modal js-modal-body" data-gallery="gallery_5" style="display: none;">
                 <div class="l-gallery-modal__inner modal-cont">
                   <div class="l-gallery-modal__img">
-                    <img src="/img/home/home_scene_list05.jpg" alt="">
+                    <img src="img/home/home_scene_list05.jpg" alt="">
                   </div>
                   <div class="l-gallery-modal__txt">
                     <div class="l-gallery-modal__txt-box">
@@ -259,7 +272,7 @@
               <div class="l-gallery-modal js-modal-body" data-gallery="gallery_6" style="display: none;">
                 <div class="l-gallery-modal__inner modal-cont">
                   <div class="l-gallery-modal__img">
-                    <img src="/img/home/home_scene_list06.jpg" alt="">
+                    <img src="img/home/home_scene_list06.jpg" alt="">
                   </div>
                   <div class="l-gallery-modal__txt">
                     <div class="l-gallery-modal__txt-box">
@@ -289,12 +302,12 @@
       </div>
     </div>
 
-    <!--#include virtual="/inc/footer.html" -->
+    <!--#include virtual="../inc/footer.html" -->
 
   </div><!-- /wrapper -->
 
-  <script src="/js/lib/jquery-3.7.1.min.js"></script>
-  <script src="/js/common.js"></script>
+  <script src="js/lib/jquery-3.7.1.min.js"></script>
+  <script src="js/common.js"></script>
 </body>
 
 </html>

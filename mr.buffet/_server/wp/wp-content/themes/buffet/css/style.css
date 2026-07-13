@@ -937,6 +937,13 @@ c-header
   cursor: pointer;
   border-radius: 10px;
 }
+.l-gallery-list__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
 .l-gallery-list__img {
   width: 100%;
   height: 100%;
@@ -12319,5 +12326,4 @@ input[type=checkbox]:checked + .wpcf7-list-item-label:before {
     padding: 10px;
   }
 }
-/*# sourceMappingURL=style.css.map */
 /*# sourceMappingURL=style.css.map */
