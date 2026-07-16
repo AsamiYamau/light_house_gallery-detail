@@ -1,0 +1,190 @@
+/* -----------------------------------------------
+* home Module
+* homeページ用
+-------------------------------------------------- */
+@use "../mixin/mixin" as *;
+@use "../setting/setting" as *;
+
+.p_business__title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    padding: 48px 0;
+    text-align: center;
+    background-color: var(--base02);
+}
+
+.p_business__content {
+    padding-bottom: 80px;
+    max-width: 1012px;
+    margin: 0 auto;
+}
+
+.c-breadcrumb {
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    display: flex;
+    margin-top: 8px;
+    line-height: 17px;
+    flex-wrap: wrap;
+}
+
+.c-breadcrumb__item {
+    margin-right: 23px;
+    position: relative;
+    &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -18px;
+        transform: translateY(-50%);
+        width: 13px;
+        height: 13px;
+        background-image: url(../img/business/breadcrumb-arrow-icon.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.c-breadcrumb__link {
+    color: #9aa183;
+}
+
+.c-breadcrumb__link--current {
+    color: var(--sub);
+}
+
+.p_business__intro {
+    margin-top: 80px;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    line-height: 1.7;
+    margin-bottom: 60px;
+}
+
+.c-info-list {
+    border-top: 1px solid var(--base02);
+    border-right: 1px solid var(--base02);
+}
+
+.c-info-list__item {
+    display: flex;
+    align-items: stretch;
+    @include sp {
+        flex-direction: column;
+    }
+}
+
+.c-info-list__title {
+    width: 149px;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    background-color: var(--base02);
+    display: grid;
+    place-items: center;
+    padding: 0 15px;
+    border-bottom: 1px solid #fff;
+    @include sp {
+        padding: 20px;
+        width: 100%;
+        text-align-last: left;
+        display: block;
+        border-bottom: unset;
+    }
+}
+
+.c-info-list__description {
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--base02);
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    color: #333;
+    @include sp {
+        border-left: 1px solid var(--base02);
+        padding: 20px;
+    }
+}
+
+.c-info-list__indent {
+    text-indent: 4px;
+}
+
+.c-info-list__payment {
+    padding: 20px 40px 20px 40px;
+    border-bottom: 1px solid var(--base02);
+    flex: 1;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    @include sp {
+        border-left: 1px solid var(--base02);
+        padding: 20px;
+    }
+}
+
+.c-info-list__payment-item {
+    position: relative;
+    padding-left: 1em;
+
+    &::before {
+        content: "・";
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-right: -4px;
+    }
+}
+
+.c-info-list__item-description {
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--base02);
+    flex: 1;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    @include sp {
+        border-left: 1px solid var(--base02);
+        padding: 20px;
+    }
+}
+
+.c-info-list__policy-heading {
+    margin-left: 15px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        top: 5px;
+        left: -14px;
+        width: 12px;
+        height: 12px;
+        background-color: #333;
+    }
+}
+
+.c-info-list__cancel-notes {
+    margin-top: 21px;
+}
+
+.c-info-list__cancel-note {
+    position: relative;
+    padding-left: 1em;
+
+    &::before {
+        content: "※";
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-right: -4px;
+    }
+}

@@ -1,0 +1,34 @@
+/* -----------------------------------------------
+* home Module
+* homeページ用
+-------------------------------------------------- */
+@use "../mixin/mixin" as *;
+@use "../setting/setting" as *;
+
+/* menu-yosan
+----------------------------------------*/
+.c-menu-yosan-summary__title-price {
+    font-family: "Roboto Condensed";
+    font-size: 37px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: normal;
+}
+
+.c-menu-yosan-summary__title-unit {
+    font-size: 26px;
+    display: inline-block;
+    margin-left: 4px;
+    @include sp {
+        margin-left: -5px;
+    }
+}
+
+.c-menu-yosan-summary__title-sub {
+    margin-left: 4px;
+    margin-top: 5px;
+}
+
+.c-menu-yosan-summary__note {
+    margin-bottom: 8px;
+}

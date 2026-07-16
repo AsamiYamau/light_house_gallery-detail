@@ -1,0 +1,60 @@
+/* -----------------------------------------------
+* home Module
+* homeページ用
+-------------------------------------------------- */
+@use "../mixin/mixin" as *;
+@use "../setting/setting" as *;
+
+.p_company-fv__logo-image-wrapper {
+    width: 100%;
+    height: 294px;
+    border-radius: 8px;
+    background-color: var(--sub);
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include sp(){
+        height: auto;
+        padding : 20px;
+    }
+}
+
+.p_company-fv__logo-image {
+    width: 228px;
+    @include sp(){
+        width: auto;
+        height: 100px;
+    }
+}
+
+.c-info-list__content {
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--base02);
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    color: #333;
+    @include sp {
+        border-left: 1px solid var(--base02);
+    }
+}
+
+.c-info-list__area {
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--base02);
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    @include sp {
+        border-left: 1px solid var(--base02);
+    }
+}

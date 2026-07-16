@@ -1,0 +1,351 @@
+@use "../mixin/mixin" as *;
+@use "../setting/setting" as *;
+/*------------------------------------------------------------------------------
+  reset PC
+------------------------------------------------------------------------------*/
+html,
+input,
+textarea,
+select,
+button {
+    font-family: "ZenKakuGothicNew", "游ゴシック体", YuGothic, "游ゴシック",
+        "Yu Gothic", "メイリオ", Meiryo, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.gothic {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        Meiryo, sans-serif;
+}
+.Allura {
+    font-family: "Allura", cursive;
+}
+
+//.mincho{
+//  font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+//}
+
+html {
+    //color: var(--sub);
+    color: #111;
+    background: var(--base01);
+    font-size: 16px;
+    line-height: 1.6;
+    word-break: break-all;
+}
+
+body {
+    margin: 0;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    border: 0;
+    margin: 0;
+    vertical-align: top;
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+a {
+    //color: var(--main);
+    color: #111;
+    text-decoration: none;
+}
+
+a:hover {
+}
+
+input,
+select,
+textarea,
+button {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+@include placeholder(#ccc);
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+label {
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: block;
+}
+
+.outer-block {
+}
+
+.inner-block {
+    position: relative;
+    width: auto;
+    max-width: 1280px;
+    padding: 0 20px;
+    @include pc {
+        margin: 0 auto;
+    }
+}
+
+#wrapper {
+    position: relative;
+}
+
+dl,
+dt,
+dd {
+    padding: 0;
+    margin: 0;
+}
+
+@include pc {
+    .sp {
+        display: none !important;
+    }
+    .sp_header {
+        display: none !important;
+    }
+
+    a[href^="tel:"] {
+        pointer-events: none;
+    }
+
+    a,
+    a::before,
+    a::after,
+    button {
+        //transition: $transition01;
+    }
+}
+
+//独自font-family読み込み
+@font-face {
+    src: url(../font/RobotoCondensed-SemiBold.ttf) format("truetype");
+    font-family: "Roboto Condensed";
+    font-weight: 600;
+    font-display: swap;
+    unicode-range: U+0030-0039, U+0041-007A;
+}
+@font-face {
+    src: url(../font/Abel-Regular.woff) format("woff");
+    font-family: "Abel";
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    src: url(../font/AkayaKanadaka-Regular.woff) format("woff");
+    font-family: "AkayaKanadaka";
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    src: url("../font/JosefinSans-VariableFont_wght.ttf") format("truetype");
+    font-family: "Josefin Sans";
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    src: url(../font/JosefinSans-Regular.ttf) format("truetype");
+    font-family: "Josefin Sans";
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    src: url(../font/Allura-Regular.ttf) format("truetype");
+    font-family: "Allura";
+    font-weight: 500;
+    font-display: swap;
+    unicode-range: U+0030-0039, U+0041-007A;
+}
+@font-face {
+    src: url(../font/ZenKakuGothicNew-Regular.woff2) format("woff2");
+    font-family: "ZenKakuGothicNew";
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    src: url(../font/ZenKakuGothicNew-Medium.ttf) format("woff2");
+    font-family: "ZenKakuGothicNew";
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    src: url(../font/ZenKakuGothicNew-Bold.woff2) format("woff2");
+    font-family: "ZenKakuGothicNew";
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Oswald";
+    src: url("../font/Oswald-VariableFont_wght.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Oswald";
+    src: url("../font/Oswald-VariableFont_wght.ttf") format("truetype");
+    font-weight: 600;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("../font/RobotoCondensed-VariableFont_wght.ttf") format("truetype");
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("../font/RobotoCondensed-VariableFont_wght.ttf") format("truetype");
+    font-weight: 600;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Corporate-Logo-Bold-ver3";
+    src: url("../font/Corporate-Logo-Bold-ver3.woff") format("woff");
+    font-weight: 700;
+    font-display: swap;
+}
+
+
+
+//@font-face {
+//  src: url(../font/NotoSansJP-Bold.woff) format("woff"),
+//    url(../font/NotoSansJP-Bold.otf) format("opentype");
+//  font-family: "Noto Sans JP";
+//  font-weight: 700;
+//  font-display: swap;
+//}
+//@font-face {
+//  src: url(../font/NotoSerifJP-Medium.woff) format("woff"),
+//    url(../font/NotoSerifJP-Medium.otf) format("opentype");
+//  font-family: "Noto Serif JP";
+//  font-weight: 500;
+//  font-display: swap;
+//}
+//@font-face {
+//  src: url(../font/NotoSerifJP-Bold.woff) format("woff"),
+//    url(../font/NotoSerifJP-Bold.otf) format("opentype");
+//  font-family: "Noto Serif JP";
+//  font-weight: 700;
+//  font-display: swap;
+//}
+
+//.serif {
+//  font-family: "Noto Serif JP", serif;
+//}
+
+//SVGスプライトリセットCSS
+.c-svg {
+    display: inline-block;
+    fill: currentColor;
+    vertical-align: top;
+}
+
+/*------------------------------------------------------------------------------
+  reset SP
+------------------------------------------------------------------------------*/
+@include sp {
+    body {
+        font-size: 14px;
+        position: relative;
+        -webkit-appearance: none;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    .outer-block {
+        min-width: 320px;
+    }
+
+    .inner-block {
+        padding: 0 20px;
+        width: auto;
+    }
+
+    #wrapper {
+        min-width: 320px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    input[type="submit"] {
+        -webkit-text-size-adjust: 100%;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 16px !important;
+    }
+
+    .pc {
+        display: none !important;
+    }
+}
+
+:root {
+    //--main: #53573e;
+    //--main: #FF6A00;
+    --main: #FF3B0A;
+    //--sub: #6d7455;
+    --sub: #CC2200;
+    --base01: #fdfaf3;
+    --base02: #fffefa;
+    //--accent: #ff7800;
+    --accent: linear-gradient(89deg,#ff7800, #CC2200FF);
+    --white: #fff;
+}

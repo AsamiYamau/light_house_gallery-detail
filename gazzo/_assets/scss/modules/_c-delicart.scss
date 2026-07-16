@@ -1,0 +1,133 @@
+@use '../mixin/mixin' as *;
+@use '../setting/setting' as *;
+
+/*------------------------------------------------------------------------------
+   デリカートのカスタマイズ用
+------------------------------------------------------------------------------*/
+
+#cart-btn{
+  width: inherit !important;
+}
+
+#cart-btn.cart-on{
+  opacity : 1 !important;
+}
+
+#item_detail_cart{
+  margin-bottom : 0 !important;
+}
+
+#delicart-button-frame{
+  @include pc(){
+    top : 80px !important;
+  }
+  @include sp(){
+    top : 60px !important;
+  }
+}
+
+#delicart-button-frame #cartbtn_close{
+  display: none !important;
+}
+
+#cartbtn_popup{
+  border-color: #6d7455 !important;
+}
+
+.cartbtn_item{
+    border-color: #6d7455 !important;
+}
+
+.cartbtn_info_item{
+    border-color: #6d7455 !important;
+}
+.item_detail_number{
+  margin-top: 10px;
+  >button {
+    display: inline-block;
+    background: var(--sub);
+    width: 30px;
+    text-align: center;
+    line-height: 26px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    @include pc{
+      margin: 0 5px;
+    }
+   
+    
+  }
+  >.item-num{
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid rgb(118,118,118);
+  }
+}
+
+.item_detail_info{
+  margin-top: 15px;
+  @include sp{
+    margin-top: 8px;
+  }
+  .variations{
+    .variation{
+      background-color: #f0f0f0;
+      border: 1px solid #c7c7c7;
+      border-radius: 8px;
+      text-align: center;
+      max-width: 100%;
+      padding: 2px 8px;
+      font-size: 13px;
+      @include sp{
+        margin-top: 5px;
+      }
+    }
+  }
+  .c-menu-item-cart-button{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+#cartbtn_contents{
+  margin-bottom: 24px;
+  .cartbtn_item{
+    border-style: dotted;
+  }
+}
+#cartbtn_info{
+  .cartbtn_info_item{
+    background-color: #fff2db;
+    padding: 9px;
+    color: var(--sub);
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    .cartbtn_info_title{
+      @include sp{
+        font-size: 12px;
+      }
+    }
+    .cartbtn_info_value{
+      font-size: 22px;
+      font-family: "Roboto";
+      @include sp{
+        font-size: 18px;
+      }
+    }
+  }
+  .cartbtn_info_item + .cartbtn_info_item{
+    margin-top: 4px;
+  }
+}
+
+#cartbtn_checkout_link{
+  span{
+    background-image :url(../img/common/button_pay.png) !important;
+    background-color: #fff !important;
+    padding-top: 19.32% !important;
+
+  }
+}

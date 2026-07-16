@@ -1,0 +1,276 @@
+@use "../mixin/mixin" as *;
+@use "../setting/setting" as *;
+
+/*------------------------------------------------------------------------------
+  footer
+------------------------------------------------------------------------------*/
+
+.c-footer {
+  @include pc {
+    width: calc(100% - 220px);
+    margin-left: auto;
+  }
+}
+
+.c-footer-contact {
+  padding-block: 72px;
+  background: url("../img/common/footer_bg.jpg") no-repeat center / cover;
+  @include sp {
+    padding-block: 28px;
+  }
+}
+
+.c-footer-contact-title {
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 20px;
+  @include sp {
+    margin-bottom: 16px;
+  }
+  .ja {
+    font-size: 28px;
+    font-weight: bold;
+    display: block;
+    @include sp {
+      font-size: 18px;
+    }
+  }
+  .en {
+    font-size: 23px;
+    font-family: "Allura";
+  }
+}
+
+.c-footer-contact-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(476px, 1fr));
+  gap: 58px;
+  @include sp {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    @include sp {
+      gap: 8px;
+    }
+  }
+  .title {
+    color: var(--white);
+    font-size: 24px;
+    font-weight: bold;
+    @include sp {
+      font-size: 14px;
+    }
+  }
+  .text {
+    color: var(--white);
+    font-size: 21px;
+    @include sp {
+      font-size: 14px;
+    }
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 90px;
+    background-color: var(--white);
+    border-radius: 50px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    @include sp {
+      height: 60px;
+      font-size: 16px;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--base02);
+      }
+    }
+    &.tel {
+      font-family: "Roboto Condensed";
+      font-size: 42px;
+      padding-left: 20px;
+      @include sp {
+        font-size: 24px;
+      }
+      .icon {
+        width: 34px;
+        height: 32px;
+        @include sp {
+          width: 24px;
+          height: 22px;
+        }
+      }
+    }
+    &.mail {
+      .icon {
+        width: 36px;
+        height: 28px;
+        @include sp {
+          width: 26px;
+          height: 20px;
+        }
+      }
+      &::after {
+        content: "";
+        width: 28px;
+        height: 28px;
+        background: url(../img/common/icon_arrow_green.svg) no-repeat center /
+          contain;
+        position: absolute;
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        @include sp {
+          width: 17px;
+          height: 17px;
+        }
+      }
+    }
+    .icon {
+      position: absolute;
+      left: 50px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      @include sp {
+        left: 30px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.c-footer-links {
+  padding-block: 72px 20px;
+  //background-color: #53573e;
+  background-color : var(--main) ;
+  color: var(--white);
+  font-size: 12px;
+  //background-image: url(../img/common/side_bg.png);
+
+  @include sp {
+    padding-block: 40px 10px;
+  }
+  a {
+    color: var(--white);
+  }
+}
+
+.c-footer-links-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  @include sp {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  a {
+    letter-spacing: 0.05em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    @include sp {
+      justify-content: space-between;
+      word-break: keep-all;
+      overflow-wrap: break-word;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 6px;
+      height: 9px;
+      background: url("../img/common/arrow_white.svg") no-repeat center /
+        contain;
+      @include sp {
+        width: 8px;
+        height: 12px;
+      }
+    }
+  }
+}
+
+.c-footer-links-info {
+  display: flex;
+  @include pc {
+    margin-top: 72px;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  @include sp {
+    margin-top: 20px;
+    gap: 16px;
+    flex-direction: column;
+  }
+  .company {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  .copyright {
+    letter-spacing: 0.1em;
+    @include sp {
+      text-align: center;
+      font-size: 11px;
+    }
+  }
+}
+
+
+.c-footer-banner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  @include sp() {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  &__img01 {
+    margin-top: 6px;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+  }
+  &__cap01 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+    margin-top: 10px;
+  }
+  &__link {
+    transition: all 0.3s;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+.c-footer-cap {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 40px;
+  @include sp {
+    font-size: 14px;
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,159 @@
+/* -----------------------------------------------
+* home Module
+* homeページ用
+-------------------------------------------------- */
+@use "../mixin/mixin" as *;
+@use "../setting/setting" as *;
+
+.c-page__wrapper {
+    padding-top: 80px;
+    margin-left: 220px;
+    @include sp {
+        padding-top: 60px;
+        margin-left: unset;
+    }
+}
+
+.c-page__title {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    padding: 40px 0 39px;
+    text-align: center;
+    background-color: var(--base02);
+    font-family: "Corporate-Logo-Bold-ver3";
+    @include sp(){
+        font-size: 20px;
+    }
+}
+
+.c-page__subtitle {
+    display: block;
+    margin-top: 9px;
+    font-size: 14px;
+    line-height: 1.15;
+    font-weight: normal;
+}
+
+.c-page__content {
+    padding: 0 20px 80px;
+    max-width: 1280px;
+    margin: 0 auto;
+    @include sp(){
+        padding-bottom: 40px;
+    }
+}
+
+.p_privacy-policy__intro {
+    margin-top: 80px;
+    font-size: 16px;
+    line-height: 1.7;
+    letter-spacing: 0.05em;
+    font-weight: normal;
+    color: #333;
+    @include sp {
+        font-size: 12px;
+    }
+}
+
+.p_privacy-policy__list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: #333;
+}
+
+.p_privacy-policy__list-item {
+    counter-increment: section;
+}
+
+.p_privacy-policy__heading {
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    &::before {
+        content: counter(section) ". ";
+    }
+    @include sp {
+        font-size: 14px;
+    }
+}
+
+.p_privacy-policy__text {
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 1.7;
+    margin-top: 8px;
+    font-weight: normal;
+    @include sp {
+        font-size: 12px;
+    }
+}
+
+.p_privacy-policy__purpose {
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 1.7;
+    margin-top: 10px;
+    font-weight: normal;
+    @include sp {
+        font-size: 12px;
+    }
+}
+
+.p_privacy-policy__sublist {
+    margin-top: 10px;
+}
+
+.p_privacy-policy__sublist-item {
+    margin-left: 12px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 11px;
+        left: -11px;
+        width: 5px;
+        height: 1px;
+        background-color: #333;
+    }
+}
+
+.p_privacy-policy__contact {
+    color: #333;
+}
+
+.p_privacy-policy__contact-heading {
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    margin-top: 44px;
+    @include sp {
+        font-size: 14px;
+    }
+}
+
+.p_privacy-policy__contact-info {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    margin-top: 4px;
+    font-weight: normal;
+    @include sp {
+        font-size: 12px;
+    }
+}
+
+.p_privacy-policy__closing {
+    color: #333;
+    margin-top: 44px;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 1.7;
+    font-weight: normal;
+    @include sp {
+        font-size: 12px;
+    }
+}

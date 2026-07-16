@@ -1,0 +1,158 @@
+@use "../mixin/mixin" as *;
+@use "../setting/setting" as *;
+
+.p_guide-sec01 {
+  margin-top: 100px;
+}
+.p_guide-sec01-list {
+  margin-top: 40px;
+  &__ttl {
+    display: flex;
+    align-items: center;
+    @include sp() {
+      align-items: start;
+    }
+  }
+  &__ttl-ico {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    //background-color: #6D7455;
+    background-color : var(--sub);
+    color: #fff;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    @include sp {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+    .step {
+      display: block;
+      font-size: 22px;
+      line-height: 1;
+      @include sp {
+        font-size: 18px;
+      }
+    }
+    .num {
+      display: block;
+      font-size: 43px;
+      line-height: .8;
+      transform: translateX(-2px);
+      @include sp {
+        font-size: 30px;
+      }
+    }
+  }
+  &__ttl-txt {
+    width: calc(100% - 80px);
+    .ttl {
+      display: block;
+      font-size: 20px;
+      font-weight: bold;
+      //color: #6D7455;
+      color: var(--sub);
+      @include sp {
+        font-size: 16px;
+      }
+    }
+    .txt {
+      display: block;
+      font-size: 14px;
+      margin-top: 8px;
+      @include sp {
+        font-size: 12px;
+      }
+    }
+  }
+  &__cont {
+    margin-top: 40px;
+    .kome {
+      text-align: right;
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: 4px;
+      @include sp {
+        font-size: 12px;
+      }
+    }
+  }
+  &__item {
+    &:not(:first-child) {
+      margin-top: 80px;
+    }
+  }
+}
+.p_guide-box {
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 47px;
+  @include sp {
+    padding: 30px;
+  }
+}
+.p_guide-btn-list {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  justify-content: center;
+  @include sp {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.p_guide-sec02 {
+  margin-top: 120px;
+  &__ttl {
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 25px;
+    position: relative;
+    color: #53573E;
+    @include sp {
+      font-size: 16px;
+    }
+    &::after {
+      content: "";
+      width: 12px;
+      height: 2px;
+      border-radius: 3px;
+      background-color: #53573E;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__cont {
+    margin-top: 25px;
+    &.mt {
+      margin-top: 80px;
+    }
+  }
+  &__aco {
+    margin-top: 25px;
+  }
+}
+.p_guide-table {
+  margin-top: 120px;
+  padding-bottom: 80px;
+}
+.p_guide {
+  color: #333;
+  letter-spacing: 0.05em;
+  .c-page__title {
+    color: #53573E;
+  }
+  &__ankor {
+    margin-top: 80px;
+    @include sp {
+      margin-top: 40px;
+    }
+  }
+}

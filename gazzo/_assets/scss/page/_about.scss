@@ -1,0 +1,496 @@
+/* -----------------------------------------------
+* home Module
+* homeページ用
+-------------------------------------------------- */
+@use "../mixin/mixin" as *;
+@use "../setting/setting" as *;
+
+/* fv
+----------------------------------------*/
+.p_about {
+
+}
+
+.p_about-fv {
+    //height: calc((1160 / 1440) * 100vw);
+    //background-image: url(../img/about/fv-bg-img01.png);
+    //background-size: calc((1960 / 1440) * 100vw) calc((2308 / 1440) * 100vw);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+/* メディアクエリ スタイル開始 */
+@media screen and (max-width: 980px) {
+    .p_about-fv {
+        //height: calc((1380 / 1440) * 100vw);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .p_about-fv {
+        //background-image: url(../img/about/fv-bg-img02.png);
+        //height: 900px;
+        background-size: contain;
+        //background-position: center 590px;
+        //background-color: #dde3d2;
+        position: relative;
+        &::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            //background-image: url(../img/common/side_bg.png);
+            //background-size: contain;
+            //background-repeat: no-repeat;
+        }
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .p_about-fv {
+        //height: 830px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .p_about-fv {
+        background-position: center 620px;
+        //height: 810px;
+    }
+}
+
+/* メディアクエリ スタイル終了 */
+
+.p_about-fv__logo {
+    text-align: center;
+    padding-top: 48px;
+}
+
+.p_about-fv__logo-image {
+    width: 212px;
+    //height: 199px;
+}
+
+@media screen and (min-width: 1440px) {
+    .p_about-fv__logo-image {
+        width: calc((212 / 1440) * 100vw);
+        //height: calc((199 / 1440) * 100vw);
+    }
+    .p_about-fv__title {
+        font-size: calc((16 / 1440) * 100vw);
+    }
+}
+
+.p_about-fv__title {
+    line-height: 1.7;
+    letter-spacing: 0.05em;
+    margin: 47px auto 0;
+    max-width: 841px;
+    text-align: center;
+    font-size: 16px;
+    padding: 0 20px;
+    font-weight: bold;
+}
+
+/* promise
+----------------------------------------*/
+.p_about-promise {
+    margin-top: 138px;
+}
+
+.p_about__inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.p_about__title {
+    margin: 0 auto;
+    //width: 315px;
+}
+
+.p_about__description {
+    max-width: 797px;
+    line-height: 1.7;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin: 48px auto 0;
+}
+
+.p_about-promise__list {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(470px, 1fr));
+    gap: 72px;
+    @include sp {
+        grid-template-columns: 1fr;
+    }
+}
+
+.p_about-promise-item {
+    width: 100%;
+}
+
+.p_about__promise-title-wrapper {
+    padding: 0 16px;
+    border-radius: 8px;
+    background-color: var(--base02);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    color: var(--sub);
+    letter-spacing: normal;
+    width: 149px;
+}
+
+.p_about__promise-title {
+    font-family: "Josefin Sans";
+    font-size: 17px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.p_about__number {
+    display: inline-block;
+    font-size: 33px;
+    font-weight: 600;
+    line-height: 49px;
+    font-family: "Oswald";
+}
+
+.p_about__image-wrapper {
+    margin-top: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.p_about__subtitle {
+    margin-top: 24px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.p_about__text-wrapper {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: #333;
+}
+
+.p_about__text {
+    line-height: 1.7;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+}
+
+.p_about-promise__button-wrapper {
+    margin: 73px auto 0;
+}
+
+.p_about-promise__button {
+    display: block;
+    width: 242px;
+    margin: 0 auto;
+    padding: 19px 0 19px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: normal;
+    border-radius: 40px;
+    border: 1px solid var(--main);
+    background-color: #fff;
+    position: relative;
+    transition: 0.3s;
+    &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        width: 16px;
+        height: 16px;
+        background-image: url(../img/about/about-promise-button-arrow-icon.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
+    }
+}
+
+/* hover スタイル開始 */
+.p_about-promise__button:hover {
+    opacity: 0.7;
+}
+
+/* hover スタイル終了 */
+
+.p_about-promise__note {
+    color: #333;
+    margin-top: 16px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+}
+
+.p_about-promise__note-highlight {
+    color: var(--sub);
+    font-weight: 500;
+}
+
+/* style
+----------------------------------------*/
+.p_about-style {
+    margin-top: 160px;
+}
+
+.p_about-style__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(964px / 3), 1fr));
+    column-gap: 24px;
+    margin-bottom: 80px;
+}
+
+.p_about-style__item {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+}
+
+/* achievement
+----------------------------------------*/
+.p_about-achievement {
+    //background-color: #dde3d2;
+    background-color : var(--base01);
+    background-image: url(../img/common/side_bg.png);
+    padding: 80px 20px 0;
+    max-width: 1052px;
+    margin: 0 auto;
+}
+
+.p_about-achievement__content {
+    display: flex;
+    gap: 50px;
+    @include sp {
+        flex-direction: column;
+    }
+}
+
+.p_about-achievement__info {
+    width: 252px;
+    height: 135px;
+    text-align: center;
+    position: relative;
+    &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 47px;
+        height: 115px;
+        //background-image: url(../img/about/about-ornament-frame.png);
+        background-image: url("../img/home/about_laurel.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 47px;
+        height: 115px;
+        //background-image: url(../img/about/about-ornament-frame.png);
+        background-image: url("../img/home/about_laurel.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: scaleX(-1);
+    }
+    @include sp {
+        margin: 0 auto;
+    }
+}
+
+.p_about-achievement__icon {
+    width: 30px;
+    height: 20px;
+}
+
+.p_about-achievement__text {
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+}
+
+.p_about-achievement__number {
+    display: block;
+    color: #ad806d;
+    font-family: "Roboto Condensed";
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: normal;
+    line-height: 59px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 3px;
+    margin-left: -8px;
+    margin-top: -5px;
+}
+.p_about-achievement__separator {
+    font-size: 42px;
+    margin-left: -8px;
+}
+
+.p_about-achievement__unit {
+    font-size: 27px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    font-family: "ZenKakuGothicNew";
+    font-weight: bold;
+}
+
+.p_about-achievement__sup {
+    display: block;
+    margin-top: -7px;
+}
+
+.p_about-achievement__description {
+    flex: 1;
+    line-height: 1.7;
+    letter-spacing: 0.05em;
+}
+
+.p_about-achievement__industries {
+    margin-top: 48px;
+    padding: 20px 40px;
+    background-color: #fff;
+    color: #333;
+}
+
+.p_about-achievement__industries-title {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+.p_about-achievement__industries-list {
+    font-size: 12px;
+    line-height: 1.7;
+    letter-spacing: 0.05em;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.p_about-achievement__image-wrapper {
+    margin-top: 26px;
+    padding-left: 151px;
+    padding-bottom: 2px;
+}
+
+/* company
+----------------------------------------*/
+.p_about-company {
+    margin-top: 159px;
+    padding-bottom: 80px;
+}
+
+.p_about-company__title {
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: var(--sub);
+    letter-spacing: 0.05em;
+}
+
+/* slider スタイル開始 */
+.slider {
+    position: relative;
+    z-index: 1;
+    //height: 517px;
+}
+//
+//.slider-item01 {
+//    background: url(../img/img_01.jpg);
+//}
+//
+//.slider-item02 {
+//    background: url(../img/img_02.jpg);
+//}
+//
+//.slider-item03 {
+//    background: url(../img/img_03.jpg);
+//}
+//
+//.slider-item04 {
+//    background: url(../img/img_04.jpg);
+//}
+//
+//.slider-item05 {
+//    background: url(../img/img_05.jpg);
+//}
+
+.slider-item {
+    width: 100%;
+    //height: 517px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.slick-dots {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    margin: 24px 0 0 0;
+}
+
+.slick-dots li {
+    display: inline-block;
+    margin: 0 12px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width: 16px;
+    height: 16px;
+    display: block;
+    border-radius: 50%;
+    background: #d9d9d9;
+}
+
+.slick-dots .slick-active button {
+    background: var(--sub);
+}
+
+.p_about-company__slider {
+    margin-top: 48px;
+    margin-bottom: 88px;
+}
+
+.p_about-company__slider-image {
+    //width: 100%;
+    //height: 517px;
+    //text-align: center;
+    //padding-top: 230px;
+    //background-color: #d9d9d9;
+    //font-size: 25px;
+    //color: #ff0000;
+    //letter-spacing: 0.05em;
+    //font-family: "Hiragino Sans", "ヒラギノ角ゴシック", "Arial", sans-serif;
+}
+
+/* slider スタイル終了 */

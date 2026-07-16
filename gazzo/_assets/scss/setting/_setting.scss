@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+// placeholder色
+$placeholderColor: #c3c3c3;
+
+// メディアクエリの基準幅
+$bp-sp: 1000px;
+$bp-pc: 1001px;
+
+// vwの基準となる幅 →320px=スマホ最小
+$vw_standard_width: 375;
+
+// transition
+$transition01: 0.3s ease-in-out;
+
+$feature-page-main: #c8a96e;
