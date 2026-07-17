@@ -3,15 +3,16 @@
 
 .l-article-list {
   display: grid;
-  @include pc(){
-    grid-template-columns: repeat(3,1fr);
+  @include pc() {
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
-  @include sp(){
-    grid-template-columns: repeat(2,1fr);
+  @include sp() {
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
-  &__li {}
+  &__li {
+  }
   &__link {
     &:hover {
       @include pc() {
@@ -31,9 +32,10 @@
       transition: $transition01;
     }
   }
-  &__txtarea {}
+  &__txtarea {
+  }
   &__data {
-    color: #A98778;
+    color: #a98778;
     letter-spacing: 0.1em;
     font-weight: bold;
     font-size: 12px;
@@ -42,11 +44,11 @@
     font-size: 14px;
     letter-spacing: 0;
     line-height: 1.8;
-    color: #4F2C1C;
+    color: #4f2c1c;
   }
 
   &.pat01 {
-    gap:4rem 2rem;
+    gap: 4rem 2rem;
     .l-article-list__img {
       aspect-ratio: 16/9;
     }
@@ -128,11 +130,10 @@
 //----------------------------------
 .l-article {
   &__top {
-    padding: 0 .5rem 1rem;
+    padding: 0 0.5rem 1rem;
     border-bottom: 1px solid #a98778;
   }
   &__cat {
-
   }
   &__date {
     text-align: right;
@@ -152,28 +153,172 @@
       margin-top: 1.6rem;
     }
     h2 {
+      margin-top: 2.2em;
+      padding-left: 16px;
+      padding-bottom: 0;
+      color: $brown;
       font-size: 2rem;
       font-weight: bold;
+      line-height: 1.6;
+      letter-spacing: 0.05em;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0.25em;
+        left: 0;
+        width: 4px;
+        height: 1.25em;
+        background-color: $main_color01;
+        border-radius: 10px;
+      }
+
+      &::after {
+        display: none;
+      }
+
       @include sp() {
+        padding-left: 14px;
         font-size: 1.8rem;
       }
     }
     h3 {
-      font-size: 1.8rem;
       font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 0.05em;
+      line-height: 1.6;
+      padding-left: 24px;
+      position: relative;
       @include sp() {
-        font-size: 1.6rem;
+        font-size: 18px;
+      }
+
+      &::before {
+        content: "";
+        width: 12px;
+        height: 2px;
+        background: $main_color01;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
       }
     }
     h4 {
       font-size: 1.6rem;
-      font-weight: bold;
-      @include sp() {
-        font-size: 1.4rem;
-      }
+      font-weight: bold; 
     }
     p {
       font-size: 1.4rem;
+    }
+    table {
+      width: 100%;
+      margin-top: 40px;
+      overflow: hidden;
+      border: 1px solid rgba($main_color01, 0.3);
+      border-radius: 18px;
+      border-collapse: separate;
+      border-spacing: 0;
+      background-color: #fff;
+    }
+
+    tr + tr {
+      th,
+      td {
+        border-top: 1px solid rgba($main_color01, 0.2);
+      }
+    }
+
+    th,
+    td {
+      padding: 18px 20px;
+      border: 0;
+      line-height: 1.7;
+      letter-spacing: 0.05em;
+      vertical-align: top;
+    }
+
+    th {
+      width: 180px;
+      color: $brown;
+      font-weight: bold;
+      text-align: left;
+      background-color: rgba($main_color01, 0.08);
+      border-right: 1px solid rgba($main_color01, 0.2);
+    }
+
+    td {
+      color: #333;
+      font-weight: normal;
+    }
+
+    figure {
+      margin: 40px 0 0;
+      overflow: hidden;
+      border-radius: 18px;
+
+      img {
+        width: 100%;
+        aspect-ratio: 920 / 520;
+        object-fit: cover;
+      }
+    }
+
+    .wp-block-gallery,
+    .blocks-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+      padding-left: 0;
+      list-style: none;
+
+      figure,
+      .blocks-gallery-item {
+        margin: 0;
+        overflow: hidden;
+        border-radius: 18px;
+        list-style: none;
+      }
+
+      img {
+        width: 100%;
+        aspect-ratio: 450 / 300;
+        object-fit: cover;
+      }
+    }
+
+    @include sp() {
+      th,
+      td {
+        display: block;
+        width: 100%;
+        padding: 12px 14px;
+      }
+
+      tr + tr {
+        th {
+          border-top: 1px solid rgba($main_color01, 0.2);
+        }
+
+        td {
+          border-top: 0;
+        }
+      }
+      td {
+        margin-top: 0 !important;
+      }
+
+      th {
+        border-right: 0;
+        border-bottom: 1px solid rgba($main_color01, 0.2);
+      }
+
+      .wp-block-gallery,
+      .blocks-gallery-grid {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }
